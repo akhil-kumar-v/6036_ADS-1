@@ -1,0 +1,2 @@
+Weighted union is best in the available options.
+Because it low depth and fewer iterations.
