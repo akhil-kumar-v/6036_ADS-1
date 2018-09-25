@@ -46,10 +46,10 @@ class Percolate {
     /**
      * Constructs the object.
      *
-     * @param      my_size  The size
+     * @param      mysize  The size
      */
-    Percolate(int my_size) {
-        this.size = my_size;
+    Percolate(final int mysize) {
+        this.size = mysize;
         grid = new boolean[size][size];
         obj = new WeightedQuickUnionUF(size * size + 2);
     }
