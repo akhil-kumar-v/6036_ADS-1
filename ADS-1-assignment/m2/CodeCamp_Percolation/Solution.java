@@ -1,4 +1,6 @@
-import java.util.*;
+// import java.util.*;
+import java.util.Scanner;
+
 /**
  * Class for solution.
  */
@@ -6,7 +8,7 @@ class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    public Solution() {
 
     }
     /**
