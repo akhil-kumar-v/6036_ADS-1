@@ -6,21 +6,22 @@ class Solution {
     /**
      * Constructs the object.
      */
-    Solution(){
+    Solution() {
 
     }
     /**
-     * { function_description }
+     * { Main function }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int input = Integer.parseInt(sc.nextLine());
-        percolate obj = new percolate(input);
+        Percolate obj = new Percolate(input);
         while (sc.hasNextLine()) {
             String[] inputs = sc.nextLine().split(" ");
-            obj.open(Integer.parseInt(inputs[0]) - 1, Integer.parseInt(inputs[1]) - 1);
+            obj.open(Integer.parseInt(inputs[0]) - 1,
+                     Integer.parseInt(inputs[1]) - 1);
         }
         System.out.println(obj.ispercolate());
     }
@@ -29,26 +30,26 @@ class Solution {
 /**
  * Class for percolate.
  */
-class percolate {
+class Percolate {
     /**
      * { boolean grid }.
      */
-    boolean[][] grid;
+    private boolean[][] grid;
     /**
      * { WeightedQuickUnionUF object }.
      */
-    WeightedQuickUnionUF obj;
+    private WeightedQuickUnionUF obj;
     /**
      * {  int size }.
      */
-    int size;
+    private int size;
     /**
      * Constructs the object.
      *
-     * @param      size  The size
+     * @param      my_size  The size
      */
-    percolate(int size) {
-        this.size = size;
+    Percolate(int my_size) {
+        this.size = my_size;
         grid = new boolean[size][size];
         obj = new WeightedQuickUnionUF(size * size + 2);
     }
@@ -58,7 +59,7 @@ class percolate {
      * @param      row     The row
      * @param      column  The column
      */
-    public void open(int row, int column) {
+    public void open(final int row, final int column) {
         if (grid[row][column]) {
             return;
         }
@@ -100,7 +101,7 @@ class percolate {
      *
      * @return     { description_of_the_return_value }
      */
-    public int convert(final int i,final int j) {
+    public int convert(final int i, final int j) {
         return i * size + j;
     }
 }
