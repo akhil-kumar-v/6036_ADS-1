@@ -1,0 +1,1 @@
+it is not possible for the given input as node-5 should be conencted to node-1 but it is connecfted to node-6
