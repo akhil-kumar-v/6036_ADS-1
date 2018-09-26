@@ -52,9 +52,9 @@ class Solution {
                     // j++;
                 }
                 // (A[i] + A[j] + A[k] > 0) ? k-- : j++
-                else if (sum > 0) {
+                if (sum > 0) {
                     k--;
-                } else if (sum < 0) {
+                } else {
                     j++;
                 }
 
