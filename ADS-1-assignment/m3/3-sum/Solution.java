@@ -34,7 +34,7 @@ class Solution {
         // System.out.println("-----------------------------------------------------");
         int pop = 0;
         // System.out.println("ochesa ikkadiki");
-        for (int i = 0; i < count - 2; i++) {
+        for (int i = 0; i < count - 3; i++) {
             // System.out.println();
             int j = i + 1;
             int k = count -1;
