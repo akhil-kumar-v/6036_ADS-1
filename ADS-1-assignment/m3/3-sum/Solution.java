@@ -47,7 +47,7 @@ class Solution {
                     ans++;
                     // System.out.println("ans here = " + ans);
                     // pop = 1;
-                    break;
+                    // break;
                 }
                 // (A[i] + A[j] + A[k] > 0) ? k-- : j++
                 if (sum > 0) {
