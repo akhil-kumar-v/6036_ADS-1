@@ -48,8 +48,8 @@ class Solution {
                     // System.out.println("ans here = " + ans);
                     // pop = 1;
                     // break;
-                    // k--;
-                    j++;
+                    k--;
+                    // j++;
                 }
                 // (A[i] + A[j] + A[k] > 0) ? k-- : j++
                 else if (sum > 0) {
