@@ -40,7 +40,7 @@ class Solution {
             int k = count - 1;
             while (k >= j) {
                 int sum = list[i] + list[j] + list[k];
-                if ( sum == 0) {
+                if ( sum == 1) {
                     // System.out.format("list[i] =%d list[j] =%d list[k] =%d\n", list[i] , list[j] , list[k]);
                     // System.out.format("i=%d | j=%d | k=%d \n", i, j, k);
                     // System.out.println("Sum = " + sum);
