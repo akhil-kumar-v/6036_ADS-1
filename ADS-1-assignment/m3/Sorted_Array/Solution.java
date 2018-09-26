@@ -1,13 +1,13 @@
 import java.util.Scanner;
-import java.lang.Math;
-// import java.lang.*;
-import java.util.Arrays;
+// import java.lang.Math;
+// // import java.lang.*;
+// import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
 
 /**
- * { Class solution }
+ * { Class solution }.
  */
 final class Solution {
     /**
@@ -16,8 +16,15 @@ final class Solution {
     private Solution() {
 
     }
+    /**
+     * { Get Mail }.
+     *
+     * @param      arr   The arr
+     *
+     * @return     { description_of_the_return_value }
+     */
     static String getlow(final List arr) {
-        String high = "" ;
+        String high = "";
         high = "" + arr.get(0);
         for (int i = 0; i < arr.size(); i++) {
             if (Integer.parseInt("" + arr.get(i)) < Integer.parseInt(high)) {
