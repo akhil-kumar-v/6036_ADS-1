@@ -36,7 +36,7 @@ class Solution {
         // System.out.println("ochesa ikkadiki");
         for (int i = 0; i < count - 2; i++) {
             // System.out.println();
-            int j = i + 1;
+            int j = i + 2;
             int k = count -1;
             while (k >= j) {
                 int sum = list[i] + list[j] + list[k];
