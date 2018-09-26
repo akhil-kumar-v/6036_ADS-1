@@ -1,9 +1,21 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for solution.
+ */
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
 
-class Solution {
-
-    public static void main(String[] args) {
+    }
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         // Integer.parseInt();
         int count =  Integer.parseInt(sc.nextLine());
@@ -16,7 +28,6 @@ class Solution {
             int a =  Integer.parseInt(sc.nextLine());
             list[i] = a;
         }
-
         Arrays.sort(list);
         int pop = 0;
         // System.out.println("ochesa ikkadiki");
