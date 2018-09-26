@@ -9,10 +9,10 @@ class Solution {
         int count =  Integer.parseInt(sc.nextLine());
         int[] list;
         int ans = 0;
-        System.out.println("counr " + count);
+        // System.out.println("counr " + count);
         list = new int[count];
         for (int i = 0; i < count ; i++) {
-            if (i % 100 == 0) System.out.println("100 " + i);
+            // if (i % 100 == 0) System.out.println("100 " + i);
             int a =  Integer.parseInt(sc.nextLine());
             list[i] = a;
         }
@@ -33,7 +33,7 @@ class Solution {
 
         // System.out.println("-----------------------------------------------------");
         int pop = 0;
-        System.out.println("ochesa ikkadiki");
+        // System.out.println("ochesa ikkadiki");
         for (int i = 0; i < count - 2; i++) {
             // System.out.println();
             int j = i + 1;
@@ -42,10 +42,10 @@ class Solution {
                 int sum = list[i] + list[j] + list[k];
                 if ( sum == 0) {
                     // System.out.format("list[i] =%d list[j] =%d list[k] =%d\n", list[i] , list[j] , list[k]);
-                    System.out.format("i=%d | j=%d | k=%d \n", i, j, k);
+                    // System.out.format("i=%d | j=%d | k=%d \n", i, j, k);
                     // System.out.println("Sum = " + sum);
                     ans++;
-                    System.out.println("ans here = " + ans);
+                    // System.out.println("ans here = " + ans);
                     // pop = 1;
                     // break;
                 }
@@ -93,7 +93,8 @@ class Solution {
         //------------------------------------------------
         //------------------------------------------------
 
-        System.out.println("test");
-        System.out.println("newwwww = " + ans);
+        // System.out.println("test");
+        // System.out.println("newwwww = " + ans);
+        System.out.println(ans);
     }
 }
