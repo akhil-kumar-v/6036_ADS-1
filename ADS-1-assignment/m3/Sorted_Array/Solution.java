@@ -1,29 +1,41 @@
 import java.util.Scanner;
-// import java.lang.Math;
-import java.lang.*;
-// import java.util.Arrays;
-// import java.util.ArrayList;
-import java.util.*;
+import java.lang.Math;
+// import java.lang.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
 
+/**
+ * { Class solution }
+ */
 final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
-    static String getlow(List arr) {
-        String low = "" ;
-        low = "" + arr.get(0);
+    static String getlow(final List arr) {
+        String high = "" ;
+        high = "" + arr.get(0);
         for (int i = 0; i < arr.size(); i++) {
-            if (Integer.parseInt("" + arr.get(i)) < Integer.parseInt(low)) {
-                low = "" + arr.get(i);
+            if (Integer.parseInt("" + arr.get(i)) < Integer.parseInt(high)) {
+                high = "" + arr.get(i);
             }
 
         }
 
 
-        return low;
+        return high;
 
     }
-    public static void main(String[] args) {
+    /**
+     * { Void main }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int sizeA = sc.nextInt();
         int sizeB = sc.nextInt();
@@ -58,16 +70,16 @@ final class Solution {
         List<String> ans1 = new ArrayList<String>();
         Collections.addAll(ans1, ans);
         while (ans1.size() > 0) {
-            String low = getlow(ans1);
+            String high = getlow(ans1);
             // System.out.println("every loop" + ans1);
             if (ans1.size() == 1) {
-                System.out.print(low);
+                System.out.print(high);
 
             } else {
-                System.out.print(low + ",");
+                System.out.print(high + ",");
 
             }
-            ans1.remove(low);
+            ans1.remove(high);
         }
         // System.out.println("qqq" + al);
 
