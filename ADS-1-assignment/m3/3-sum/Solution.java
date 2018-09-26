@@ -23,7 +23,7 @@ final class Solution {
         int ans = 0;
         // System.out.println("counr " + count);
         list = new int[count];
-        for (int i = 0; i < count ; i++) {
+        for (int i = 0; i < count; i++) {
             // if (i % 100 == 0) System.out.println("100 " + i);
             int a =  Integer.parseInt(sc.nextLine());
             list[i] = a;
