@@ -11,7 +11,7 @@ final class Solution {
 
     }
     /**
-     * { function_description }
+     * { main function }.
      *
      * @param      args  The arguments
      */
@@ -38,7 +38,7 @@ final class Solution {
             int k = count - 1;
             while (k > j) {
                 int sum = list[i] + list[j] + list[k];
-                if ( sum == 0) {
+                if (sum == 0) {
                     ans++;
                 }
                 if (sum > 0) {
