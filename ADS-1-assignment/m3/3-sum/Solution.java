@@ -38,7 +38,7 @@ class Solution {
             // System.out.println();
             int j = i + 1;
             int k = count - 1;
-            while (k >= j) {
+            while (k > j) {
                 int sum = list[i] + list[j] + list[k];
                 if ( sum == 0) {
                     // System.out.format("list[i] =%d list[j] =%d list[k] =%d\n", list[i] , list[j] , list[k]);
@@ -48,7 +48,7 @@ class Solution {
                     // System.out.println("ans here = " + ans);
                     // pop = 1;
                     // break;
-                    k--;
+                    // k--;
                     // j++;
                 }
                 // (A[i] + A[j] + A[k] > 0) ? k-- : j++
