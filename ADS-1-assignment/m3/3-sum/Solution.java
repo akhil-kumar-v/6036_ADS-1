@@ -37,7 +37,7 @@ class Solution {
         for (int i = 0; i < count - 3; i++) {
             // System.out.println();
             int j = i + 1;
-            int k = count -1;
+            int k = count - 1;
             while (k >= j) {
                 int sum = list[i] + list[j] + list[k];
                 if ( sum == 0) {
@@ -48,9 +48,10 @@ class Solution {
                     // System.out.println("ans here = " + ans);
                     // pop = 1;
                     // break;
+                    k--;
                 }
                 // (A[i] + A[j] + A[k] > 0) ? k-- : j++
-                if (sum > 0) {
+                else if (sum > 0) {
                     k--;
                 } else {
                     j++;
