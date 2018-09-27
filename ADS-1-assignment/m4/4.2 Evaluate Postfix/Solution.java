@@ -10,15 +10,15 @@ class Solution {
     /**
      * { int top }.
      */
-    static private int top;
+    static int top;
     /**
      * { int MAXSIZE }.
      */
-    static private int MAXSIZE;
+    static int MAXSIZE;
     /**
      * { int[] stack Array }.
      */
-    static private int[] stackArr;
+    static int[] stackArr;
     /**
      * Constructs the object.
      */
@@ -53,7 +53,7 @@ class Solution {
      * @return     True if anumber, False otherwise.
      */
 
-    static boolean isAnumber(String num) {
+    static boolean isAnumber(final String num) {
         try {
             int a = Integer.parseInt(num);
         } catch (Exception e) {
