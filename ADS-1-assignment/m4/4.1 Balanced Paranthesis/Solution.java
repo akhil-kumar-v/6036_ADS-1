@@ -100,7 +100,7 @@ final class Solution {
         while (t > 0) {
             // System.out.println("--------------------------------------");
             t--;
-            int tp=0;
+            int tp = 0;
             // flag = false;
             flag = false;
             // System.out.println("new t =" + t);
@@ -111,7 +111,7 @@ final class Solution {
             // System.out.println("line.length = " + line.length);
             for (int i = 0; i < line.length; i++) {
                 // System.out.println(  "hello");
-                tp=st.getTop();
+                tp = st.getTop();
                 if (line[i].equals("{") ||  line[i].equals("(")
                         ||   line[i].equals("[")) {
                     // System.out.println("pusshing = " + line[i]);
