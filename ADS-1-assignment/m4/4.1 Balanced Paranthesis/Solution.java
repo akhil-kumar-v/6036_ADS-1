@@ -98,17 +98,15 @@ final class Solution {
             // System.out.println("line.length = " + line.length);
             for (int i = 0; i < line.length; i++) {
                 // System.out.println(  "hello");
-                if (line[i].equals("{") ||  line[i].equals("(") ||   line[i].equals("[")) {
+                if (line[i].equals("{") ||  line[i].equals("(")
+                        ||   line[i].equals("[")) {
                     // System.out.println("pusshing = " + line[i]);
                     st.stPush(line[i]);
                 } else if (st.top >= 1) {
-                    // System.out.println("else is heere with  = " + line[i]);
                     String str = st.stPop();
                     String revstr = getOpp(line[i]);
                     // str = getOpp(line[i]);
-                    // System.out.println("str =" + str + "revstr = " + revstr);
                     if (!str.equals(revstr)) {
-                        // System.out.println("NO when str = " + str + " and revstr " + revstr);
                         flag = true;
                         System.out.println("NO");
                         break;
@@ -116,18 +114,10 @@ final class Solution {
                 }
 // System.out.println(" stack size = "+ st.top);
             }
-            // if (flag) {
-            //     System.out.println("ochesa ikadiki");
-            //     break;
-            // }
-            // if (c1 == 0 && c2 == 0 && c3 == 0) {
-            //     System.out.println("YES");
-            // } else {
-            //     System.out.println("NO");
-            // }
+
             if (!flag && st.top == 0) {
                 System.out.println("YES");
-            } else if(!flag){
+            } else if (!flag) {
                 System.out.println("NO");
             }
         }
