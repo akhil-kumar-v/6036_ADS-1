@@ -1,12 +1,21 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
-
+/**
+ * { Class Solution }.
+ */
 final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
-    public static void main(String[] args) {
+    /**
+     * { Main function }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = Integer.parseInt(sc.nextLine());
         int open = 0, close = 0;
@@ -20,7 +29,7 @@ final class Solution {
             // System.out.println("line.length = " + line.length);
             for (int i = 0; i < line.length; i++) {
 
-                switch(line[i]) {
+                switch (line[i]) {
                 case "[":
                     c1++;
                     break;
@@ -49,25 +58,6 @@ final class Solution {
 
                 }
 
-
-
-
-                // // System.out.println("i am for i = " + i + "line [" + i + "] = " + line[i]);
-                // if (line[i].equals("{") || line[i].equals("(") || line[i].equals("[")) {
-                //     // System.out.println("****************************************");
-                //     // System.out.println("bf open = " + open);
-                //     open++;
-                //     // System.out.println("af open = " + open);
-
-                // } else if (line[i].equals("}") || line[i].equals(")") || line[i].equals("]")) {
-                //     // System.out.println(" ------------------------------- ");
-
-                //     // System.out.println("bf close = " + close);
-
-                //     close++;
-                //     // System.out.println(" af close = " + close);
-
-                // }
             }
             if (c1 == 0 && c2 == 0 && c3 == 0) {
                 System.out.println("YES");
