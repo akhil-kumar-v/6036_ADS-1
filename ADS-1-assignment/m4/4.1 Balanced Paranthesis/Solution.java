@@ -6,7 +6,7 @@ class MyStackClass {
     /**
     * { int top }.
     */
-    static public int top;
+    static int top;
     /**
      * { int MAXSIZE }.
      */
@@ -24,6 +24,9 @@ class MyStackClass {
         top = -1;
         maxSize = size;
         stackArr = new String[maxSize];
+    }
+    public int getTop(){
+        return top;
     }
     /**
      * { Push in stack }.
@@ -123,8 +126,8 @@ final class Solution {
                 }
 // System.out.println(" stack size = "+ st.top);
             }
-
-            if (!flag && st.top == 0) {
+            int tp =st.getTop();
+            if (!flag && tp == 0) {
                 System.out.println("YES");
             } else if (!flag) {
                 System.out.println("NO");
