@@ -125,8 +125,11 @@ final class Solution {
             // } else {
             //     System.out.println("NO");
             // }
-            if (!flag) {
+            if (!flag && st.top==-1) {
                 System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
             }
         }
 
