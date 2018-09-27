@@ -1,7 +1,4 @@
 import java.util.Scanner;
-// import java.util.Stack;
-// import java.util.Arrays;
-
 /**
  * Class for my stack class.
  */
@@ -53,8 +50,6 @@ class MyStackClass {
      *
      * @return     True if anumber, False otherwise.
      */
-
-
 }
 
 
