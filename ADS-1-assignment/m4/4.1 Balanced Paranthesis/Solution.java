@@ -127,9 +127,8 @@ final class Solution {
             // }
             if (!flag && st.top == 0) {
                 System.out.println("YES");
-            } else {
+            } else if(!flag){
                 System.out.println("NO");
-
             }
         }
 
