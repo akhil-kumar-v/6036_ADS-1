@@ -10,15 +10,15 @@ final class Solution {
     /**
      * { int top }.
      */
-    static int top;
+    static private int top;
     /**
      * { int MAXSIZE }.
      */
-    static int maxSize;
+    static private int maxSize;
     /**
      * { int[] stack Array }.
      */
-    static int[] stackArr;
+    static private int[] stackArr;
     /**
      * Constructs the object.
      */
