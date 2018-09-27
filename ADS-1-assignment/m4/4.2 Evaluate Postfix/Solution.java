@@ -2,27 +2,51 @@ import java.util.Scanner;
 // import java.util.Stack;
 import java.util.Arrays;
 
-
+/**
+ * Class for solution.
+ */
 
 class Solution {
+    /**
+     * { var_description }
+     */
     static private int top;
+    /**
+     * { var_description }
+     */
     static private int MAXSIZE;
+    /**
+     * { var_description }
+     */
     static private int[] stackArr;
+    /**
+     * Constructs the object.
+     */
     Solution() {
         top = -1;
         MAXSIZE = 100;
         stackArr = new int[MAXSIZE];
     }
-
-    static void stPush(int val) {
-        // System.out.println("top = " + top);
+    /**
+     * { function_description }
+     *
+     * @param      val   The value
+     */
+    static void stPush(final int val) {
+        System.out.println("top = " + top);
         // top-=1;
         stackArr[++top] = val;
     }
     static int stPop() {
         return stackArr[top--];
     }
-
+    /**
+     * Determines if anumber.
+     *
+     * @param      num   The number
+     *
+     * @return     True if anumber, False otherwise.
+     */
 
     static boolean isAnumber(String num) {
         try {
@@ -32,7 +56,11 @@ class Solution {
         }
         return true;
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String[] line = sc.nextLine().split(" ");
