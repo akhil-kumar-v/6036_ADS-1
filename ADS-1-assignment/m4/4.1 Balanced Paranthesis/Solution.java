@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/**
+ * Class for my stack class.
+ */
 class MyStackClass {
     /**
     * { int top }.
@@ -56,8 +59,14 @@ class MyStackClass {
  * { Class Solution }.
  */
 final class Solution {
-
-    static String getOpp(String str) {
+    /**
+     * Gets the opp.
+     *
+     * @param      str   The string
+     *
+     * @return     The opp.
+     */
+    static String getOpp(final String str) {
         if (str.equals(")")) {
             return "(";
         } else if (str.equals("}")) {
