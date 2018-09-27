@@ -6,7 +6,7 @@ class MyStackClass {
     /**
     * { int top }.
     */
-    static private int top;
+    private int top;
     /**
      * { int MAXSIZE }.
      */
@@ -25,6 +25,11 @@ class MyStackClass {
         maxSize = size;
         stackArr = new String[maxSize];
     }
+    /**
+     * Gets the top.
+     *
+     * @return     The top.
+     */
     public int getTop() {
         return top;
     }
@@ -33,7 +38,7 @@ class MyStackClass {
      *
      * @param      val   The value
      */
-    static void stPush(final String val) {
+     void stPush(final String val) {
         // System.out.println("top = " + top);
         // top-=1;
         stackArr[++top] = val;
@@ -44,7 +49,7 @@ class MyStackClass {
      *
      * @return     { Returns poped values }
      */
-    static String stPop() {
+    String stPop() {
         // System.out.println("top = " + top);
         return stackArr[top--];
     }
