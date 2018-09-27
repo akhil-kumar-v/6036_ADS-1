@@ -6,7 +6,7 @@ class MyStackClass {
     /**
     * { int top }.
     */
-    static int top;
+    static public int top;
     /**
      * { int MAXSIZE }.
      */
