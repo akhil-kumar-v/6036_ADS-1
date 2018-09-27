@@ -21,6 +21,8 @@ final class Solution {
     static private int[] stackArr;
     /**
      * Constructs the object.
+     *
+     * @param      size  The size
      */
     private Solution(final int size) {
         top = -1;
