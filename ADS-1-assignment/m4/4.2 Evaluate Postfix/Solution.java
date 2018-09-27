@@ -1,6 +1,6 @@
 import java.util.Scanner;
 // import java.util.Stack;
-import java.util.Arrays;
+// import java.util.Arrays;
 
 /**
  * Class for solution.
@@ -14,7 +14,7 @@ class Solution {
     /**
      * { int MAXSIZE }.
      */
-    static int MAXSIZE;
+    static int maxSize;
     /**
      * { int[] stack Array }.
      */
@@ -24,8 +24,8 @@ class Solution {
      */
     Solution() {
         top = -1;
-        MAXSIZE = 100;
-        stackArr = new int[MAXSIZE];
+        maxSize = 100;
+        stackArr = new int[maxSize];
     }
     /**
      * { Push in stack }.
