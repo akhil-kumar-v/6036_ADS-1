@@ -72,7 +72,8 @@ final class Solution {
         Scanner sc = new Scanner(System.in);
         String[] line = sc.nextLine().split(" ");
         // System.out.println(Arrays.toString(line));
-        Solution st = new Solution(100);
+        final int hun = 100;
+        Solution st = new Solution(hun);
         for (int i = 0; i < line.length; i++) {
             if (isAnumber(line[i])) {
                 st.stPush(Integer.parseInt(line[i]));
