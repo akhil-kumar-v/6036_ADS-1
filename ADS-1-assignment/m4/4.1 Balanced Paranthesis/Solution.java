@@ -6,7 +6,7 @@ class MyStackClass {
     /**
     * { int top }.
     */
-    static int top;
+    static private int top;
     /**
      * { int MAXSIZE }.
      */
@@ -25,7 +25,7 @@ class MyStackClass {
         maxSize = size;
         stackArr = new String[maxSize];
     }
-    public int getTop(){
+    public int getTop() {
         return top;
     }
     /**
@@ -100,6 +100,7 @@ final class Solution {
         while (t > 0) {
             // System.out.println("--------------------------------------");
             t--;
+            int tp=0;
             // flag = false;
             flag = false;
             // System.out.println("new t =" + t);
@@ -110,11 +111,12 @@ final class Solution {
             // System.out.println("line.length = " + line.length);
             for (int i = 0; i < line.length; i++) {
                 // System.out.println(  "hello");
+                tp=st.getTop();
                 if (line[i].equals("{") ||  line[i].equals("(")
                         ||   line[i].equals("[")) {
                     // System.out.println("pusshing = " + line[i]);
                     st.stPush(line[i]);
-                } else if (st.top >= 1) {
+                } else if (tp >= 1) {
                     String str = st.stPop();
                     String revstr = getOpp(line[i]);
                     // str = getOpp(line[i]);
@@ -126,7 +128,7 @@ final class Solution {
                 }
 // System.out.println(" stack size = "+ st.top);
             }
-            int tp =st.getTop();
+            tp = st.getTop();
             if (!flag && tp == 0) {
                 System.out.println("YES");
             } else if (!flag) {
