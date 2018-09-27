@@ -3,7 +3,7 @@ import java.util.Scanner;
 // import java.util.Arrays;
 
 
-class myStack {
+class MyStackClass {
     /**
     * { int top }.
     */
@@ -21,7 +21,7 @@ class myStack {
      *
      * @param      size  The size
      */
-    myStack(final int size) {
+    MyStackClass(final int size) {
         top = -1;
         maxSize = size;
         stackArr = new int[maxSize];
@@ -60,11 +60,11 @@ class myStack {
  * Class for solution.
  */
 
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
 
     }
     /**
@@ -92,7 +92,7 @@ class Solution {
         String[] line = sc.nextLine().split(" ");
         // System.out.println(Arrays.toString(line));
         final int hun = 100;
-        myStack st = new myStack(hun);
+        MyStackClass st = new MyStackClass(hun);
         for (int i = 0; i < line.length; i++) {
             if (isAnumber(line[i])) {
                 st.stPush(Integer.parseInt(line[i]));
