@@ -22,9 +22,9 @@ final class Solution {
     /**
      * Constructs the object.
      */
-    private Solution() {
+    private Solution(final int size) {
         top = -1;
-        maxSize = 100;
+        maxSize = size;
         stackArr = new int[maxSize];
     }
     /**
@@ -70,7 +70,7 @@ final class Solution {
         Scanner sc = new Scanner(System.in);
         String[] line = sc.nextLine().split(" ");
         // System.out.println(Arrays.toString(line));
-        Solution st = new Solution();
+        Solution st = new Solution(100);
         for (int i = 0; i < line.length; i++) {
             if (isAnumber(line[i])) {
                 st.stPush(Integer.parseInt(line[i]));
