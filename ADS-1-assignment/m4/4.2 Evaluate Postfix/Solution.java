@@ -7,15 +7,15 @@ class myStack {
     /**
     * { int top }.
     */
-    static int top;
+    private static int top;
     /**
      * { int MAXSIZE }.
      */
-    static int maxSize;
+    private int maxSize;
     /**
      * { int[] stack Array }.
      */
-    static int[] stackArr;
+    private static int[] stackArr;
     /**
      * Constructs the object.
      *
@@ -60,7 +60,13 @@ class myStack {
  * Class for solution.
  */
 
-final class Solution {
+class Solution {
+    /**
+     * Constructs the object.
+     */
+    Solution() {
+
+    }
     /**
      * Determines if anumber.
      *
