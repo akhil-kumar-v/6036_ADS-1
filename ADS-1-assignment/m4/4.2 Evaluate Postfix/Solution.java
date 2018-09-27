@@ -15,7 +15,7 @@ class Solution {
     }
 
     static void stPush(int val) {
-        System.out.println("top = " + top);
+        // System.out.println("top = " + top);
         // top-=1;
         stackArr[++top] = val;
     }
