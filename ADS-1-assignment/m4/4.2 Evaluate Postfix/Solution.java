@@ -2,14 +2,11 @@ import java.util.Scanner;
 // import java.util.Stack;
 // import java.util.Arrays;
 
-/**
- * Class for solution.
- */
 
-final class Solution {
+class myStack {
     /**
-     * { int top }.
-     */
+    * { int top }.
+    */
     static int top;
     /**
      * { int MAXSIZE }.
@@ -24,7 +21,7 @@ final class Solution {
      *
      * @param      size  The size
      */
-    private Solution(final int size) {
+    myStack(final int size) {
         top = -1;
         maxSize = size;
         stackArr = new int[maxSize];
@@ -55,6 +52,22 @@ final class Solution {
      * @return     True if anumber, False otherwise.
      */
 
+
+}
+
+
+/**
+ * Class for solution.
+ */
+
+final class Solution {
+    /**
+     * Determines if anumber.
+     *
+     * @param      num   The number
+     *
+     * @return     True if anumber, False otherwise.
+     */
     static boolean isAnumber(final String num) {
         try {
             int a = Integer.parseInt(num);
@@ -73,7 +86,7 @@ final class Solution {
         String[] line = sc.nextLine().split(" ");
         // System.out.println(Arrays.toString(line));
         final int hun = 100;
-        Solution st = new Solution(hun);
+        myStack st = new myStack(hun);
         for (int i = 0; i < line.length; i++) {
             if (isAnumber(line[i])) {
                 st.stPush(Integer.parseInt(line[i]));
