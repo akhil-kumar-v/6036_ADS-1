@@ -1,80 +1,167 @@
-t = 79
-YES
-YES
-NO
-NO
-YES
-NO
-YES
-YES
-YES
-NO
-YES
-YES
-YES
-YES
-NO
-YES
-YES
-YES
-YES
-NO
-NO
-NO
-YES
-YES
-YES
-YES
-YES
-YES
-NO
-NO
-NO
-NO
-YES
-NO
-NO
-NO
-YES
-NO
-YES
-NO
-NO
-YES
-NO
-NO
-NO
-YES
-YES
-NO
-YES
-YES
-YES
-NO
-YES
-NO
-YES
-NO
-NO
-YES
-NO
-YES
-YES
-NO
-YES
-NO
-YES
-YES
-NO
-NO
-NO
-NO
-YES
-YES
-YES
-YES
-NO
-YES
-NO
-YES
+ stack size = 0
+ stack size = 1
+top = 1
+str =(revstr = (
+ stack size = 0
+ stack size = 0
+ stack size = 1
+ stack size = 2
+top = 2
+str ={revstr = {
+ stack size = 1
+ stack size = 2
+top = 2
+str =(revstr = (
+ stack size = 1
+top = 1
+str =[revstr = [
+ stack size = 0
+ stack size = 1
+top = 1
+str =[revstr = [
+ stack size = 0
+ stack size = 1
+top = 1
+str =(revstr = (
+ stack size = 0
+ stack size = 1
+top = 1
+str ={revstr = {
+ stack size = 0
+ stack size = 1
+ stack size = 2
+ stack size = 3
+top = 3
+str ={revstr = {
+ stack size = 2
+ stack size = 3
+ stack size = 4
+top = 4
+str =(revstr = (
+ stack size = 3
+top = 3
+str =(revstr = (
+ stack size = 2
+ stack size = 3
+ stack size = 4
+ stack size = 5
+ stack size = 6
+top = 6
+str ={revstr = {
+ stack size = 5
+top = 5
+str =[revstr = [
+ stack size = 4
+top = 4
+str =[revstr = [
+ stack size = 3
+top = 3
+str =(revstr = (
+ stack size = 2
+top = 2
+str =[revstr = [
+ stack size = 1
+ stack size = 2
+top = 2
+str =[revstr = [
+ stack size = 1
+top = 1
+str =(revstr = (
+ stack size = 0
+ stack size = 1
+top = 1
+str =[revstr = [
+ stack size = 0
+ stack size = 1
+ stack size = 2
+top = 2
+str =[revstr = [
+ stack size = 1
+ stack size = 2
+top = 2
+str =[revstr = [
+ stack size = 1
+top = 1
+str =(revstr = (
+ stack size = 0
+ stack size = 1
+top = 1
+str =(revstr = (
+ stack size = 0
+ stack size = 1
+top = 1
+str ={revstr = {
+ stack size = 0
+ stack size = 1
+ stack size = 2
+top = 2
+str ={revstr = {
+ stack size = 1
+ stack size = 2
+ stack size = 3
+top = 3
+str =[revstr = [
+ stack size = 2
+ stack size = 3
+top = 3
+str =(revstr = (
+ stack size = 2
+ stack size = 3
+top = 3
+str ={revstr = {
+ stack size = 2
+top = 2
+str ={revstr = {
+ stack size = 1
+top = 1
+str ={revstr = {
+ stack size = 0
+ stack size = 1
+top = 1
+str =(revstr = (
+ stack size = 0
+ stack size = 1
+top = 1
+str =[revstr = [
+ stack size = 0
+ stack size = 1
+ stack size = 2
+top = 2
+str ={revstr = {
+ stack size = 1
+top = 1
+str =(revstr = (
+ stack size = 0
+ stack size = 1
+ stack size = 2
+top = 2
+str ={revstr = {
+ stack size = 1
+ stack size = 2
+ stack size = 3
+top = 3
+str ={revstr = {
+ stack size = 2
+ stack size = 3
+ stack size = 4
+ stack size = 5
+top = 5
+str ={revstr = {
+ stack size = 4
+top = 4
+str =[revstr = [
+ stack size = 3
+ stack size = 4
+top = 4
+str =[revstr = [
+ stack size = 3
+top = 3
+str =(revstr = (
+ stack size = 2
+top = 2
+str ={revstr = {
+ stack size = 1
+top = 1
+str =[revstr = [
+ stack size = 0
 YES

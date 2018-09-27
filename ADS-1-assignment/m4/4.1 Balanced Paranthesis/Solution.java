@@ -101,7 +101,7 @@ final class Solution {
                 if (line[i].equals("{") ||  line[i].equals("(") ||   line[i].equals("[")) {
                     // System.out.println("pusshing = " + line[i]);
                     st.stPush(line[i]);
-                } else if(st.top>=1){
+                } else if (st.top >= 1) {
                     // System.out.println("else is heere with  = " + line[i]);
                     String str = st.stPop();
                     String revstr = getOpp(line[i]);
@@ -114,7 +114,7 @@ final class Solution {
                         break;
                     }
                 }
-
+// System.out.println(" stack size = "+ st.top);
             }
             // if (flag) {
             //     System.out.println("ochesa ikadiki");
@@ -125,11 +125,11 @@ final class Solution {
             // } else {
             //     System.out.println("NO");
             // }
-            if (!flag && st.top==-1) {
+            if (!flag && st.top == 0) {
                 System.out.println("YES");
-            }
-            else{
+            } else {
                 System.out.println("NO");
+
             }
         }
 
