@@ -22,7 +22,7 @@ class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
         top = -1;
         maxSize = 100;
         stackArr = new int[maxSize];
