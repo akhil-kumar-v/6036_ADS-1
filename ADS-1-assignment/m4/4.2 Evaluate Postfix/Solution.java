@@ -8,15 +8,15 @@ import java.util.Arrays;
 
 class Solution {
     /**
-     * { var_description }
+     * { int top }.
      */
     static private int top;
     /**
-     * { var_description }
+     * { int MAXSIZE }.
      */
     static private int MAXSIZE;
     /**
-     * { var_description }
+     * { int[] stack Array }.
      */
     static private int[] stackArr;
     /**
@@ -28,15 +28,20 @@ class Solution {
         stackArr = new int[MAXSIZE];
     }
     /**
-     * { function_description }
+     * { Push in stack }.
      *
      * @param      val   The value
      */
     static void stPush(final int val) {
-        System.out.println("top = " + top);
+        // System.out.println("top = " + top);
         // top-=1;
         stackArr[++top] = val;
     }
+    /**
+     * Pop from stack.
+     *
+     * @return     { Returns poped values }
+     */
     static int stPop() {
         return stackArr[top--];
     }
@@ -57,11 +62,11 @@ class Solution {
         return true;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String[] line = sc.nextLine().split(" ");
         // System.out.println(Arrays.toString(line));
@@ -90,7 +95,7 @@ class Solution {
                     ans = a / b;
                     st.stPush(ans);
                     break;
-
+                default:
 
                 }
             }
