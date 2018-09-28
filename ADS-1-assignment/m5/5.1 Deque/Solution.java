@@ -29,27 +29,36 @@ final class Deque {
         // System.out.println(Arrays.toString(stackArr));
 
     }
-    int popLeft() {
-        int value = stackArr[0];
-        for (int i = 0; i < size - 1; i++) {
-            stackArr[i] = stackArr[i + 1];
+    void popLeft() {
+
+        if (size == 0) {
+            System.out.println("Deck is empty");
+        } else {
+            int value = stackArr[0];
+            for (int i = 0; i < size - 1; i++) {
+                stackArr[i] = stackArr[i + 1];
+            }
+            size--;
+            printStack();
         }
-        size--;
-        printStack();
         // System.out.println(Arrays.toString(stackArr));
-        return value;
+        // return value;
     }
-    int popRight() {
-        size--;
-        printStack();
+    void popRight() {
+        if (size == 0) {
+            System.out.println("Deck is empty");
+        } else {
+            size--;
+            printStack();
+        }
         // System.out.println(Arrays.toString(stackArr));
-        return stackArr[size + 1];
+        // return stackArr[size + 1];
     }
     int getSize() {
         return size ;
     }
     void printStack() {
-        if(size==0){
+        if (size == 0) {
             System.out.println("[]");
         }
         for (int i = 0; i < size; i++) {
@@ -59,7 +68,7 @@ final class Deque {
             } else if (i == 0 && size != 1) {
                 System.out.print("[" + stackArr[i] + ", ");
 
-            } else if (i == size-1) {
+            } else if (i == size - 1) {
                 System.out.print(stackArr[i] + "]\n");
             } else {
                 System.out.print(stackArr[i] + ", ");
