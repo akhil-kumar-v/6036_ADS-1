@@ -7,7 +7,7 @@ final class Deque {
     private int maxsize;
 
     Deque() {
-        maxsize = 10;
+        maxsize = 10000;
         size = 0;
         stackArr = new int[maxsize];
     }
