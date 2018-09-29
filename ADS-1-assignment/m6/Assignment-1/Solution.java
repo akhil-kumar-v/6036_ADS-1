@@ -4,6 +4,9 @@
 
 import java.util.*;
 
+import java.lang.StringBuilder;
+
+
 /*  Class Node  */
 class Node {
     protected int data;
@@ -107,6 +110,9 @@ class AddLargeNumbers {
         String str = "";
         // return str;
         str = list.display();
+        StringBuilder st = new StringBuilder();
+        st.append(str);
+        str=""+st.reverse();
         return str;
     }
 
