@@ -1,125 +1,118 @@
-import java.util.Scanner;
+/*
+ * Java Program to Implement Stack using Linked List
+ */
 
+import java.util.*;
 
+/*  Class Node  */
 class Node {
-    Node link;
-    int value;
-    Node() {
-        link = null;
-        value = 0;
-    }
-    Node(Node givenLink, int data) {
-        link = givenLink;
-        value = data;
+    protected int data;
+    protected Node link;
 
+    /*  Constructor  */
+    public Node() {
+        link = null;
+        data = 0;
     }
-    void setLink(Node l) {
-        link = l;
+    /*  Constructor  */
+    public Node(int d, Node n) {
+        data = d;
+        link = n;
     }
-    void setData(int d) {
-        value = d;
+    /*  Function to set link to next Node  */
+    public void setLink(Node n) {
+        link = n;
     }
-    int getData() {
-        return value;
+    /*  Function to set data to current Node  */
+    public void setData(int d) {
+        data = d;
     }
-    Node getLink() {
+    /*  Function to get link to next node  */
+    public Node getLink() {
         return link;
     }
+    /*  Function to get data from current Node  */
+    public int getData() {
+        return data;
+    }
 }
 
-class LinkedList {
-    Node head;
-    Node tail;
-    // int size;
-    int top;
+/*  Class linkedStack  */
+class LinkedListStack {
+    protected Node top ;
+    protected int size ;
 
-    LinkedList() {
-        head = null;
-        tail = null;
-        // size = 0;
-        top = -1;
+    /*  Constructor  */
+    public LinkedListStack() {
+        top = null;
+        size = 0;
     }
-
-    void listPush(int value) {
-        Node newNode = new Node(null, value);
-        top++;
-        if (head == null) {
-            head = newNode;
-            tail = head;
-            // head.setLink(newNode);
-        } else {
-            tail.setLink(newNode);
+    /*  Function to check if stack is empty */
+    public boolean isEmpty() {
+        return top == null;
+    }
+    /*  Function to get the size of the stack */
+    public int getSize() {
+        return size;
+    }
+    /*  Function to push an element to the stack */
+    public void listPush(int data) {
+        Node nptr = new Node (data, null);
+        if (top == null)
+            top = nptr;
+        else {
+            nptr.setLink(top);
+            top = nptr;
         }
+        size++ ;
     }
-    int listPop() {
-        // if (head == null) {
-
-        // } else if (top == 1) {
-        //     head = head.getLink();
+    /*  Function to pop an element from the stack */
+    public int listPop() {
+        Node ptr = top;
+        top = ptr.getLink();
+        size-- ;
+        return ptr.getData();
+    }
+    /*  Function to display the status of the stack */
+    public String display() {
+        // System.out.print("\nStack = ");
+        String str = "";
+        // if (size == 0) {
+        //     System.out.print("Empty\n");
+        //     return ;
         // }
-
-
-        //=========================
-
-        Node st = head;
-        Node ta = head;
-        while (st != tail) {
-            ta = st;
-            st = st.getLink();
+        Node ptr = top;
+        while (ptr != null) {
+            // System.out.print(ptr.getData() + " ");
+            str += "" + ptr.getData();
+            ptr = ptr.getLink();
         }
-        int val = ta.getData();
-        tail = ta;
-        tail.setLink(null);
-        top --;
-        return val;
-        //=========================
+        // System.out.println();
+        return str;
     }
-
-    int getSize() {
-        return top + 1;
-    }
-
-    boolean isEmpty() {
-        return top == -1;
-    }
-
 }
-class AddLargeNumbers {
-    static Node head;
-    static Node tail;
 
-    public static LinkedList numberToDigits(String number) {
-        String[] list = number.split(" ");
-        LinkedList li = new LinkedList();
+class AddLargeNumbers {
+
+    public static LinkedListStack numberToDigits(String number) {
+        LinkedListStack li = new LinkedListStack();
+        String[] list = number.split("");
         for (int i = 0; i < list.length; i++) {
             li.listPush(Integer.parseInt(list[i]));
         }
-        // System.out.println("sss = " + digitsToNumber(li));
         return li;
     }
 
-    public static String digitsToNumber(LinkedList list) {
-        Node st = list.head;
-        Node ta = list.head;
+    public static String digitsToNumber(LinkedListStack list) {
         String str = "";
-        // System.out.println("helloooooo");
-        // System.out.println("st " + st);
-        while (st != tail) {
-            ta = st;
-            // System.out.println("data = " + st.getData());
-            // System.out.println("link = " + st.getLink());
-            str = "" + st.getData();
-            st = st.getLink();
-        }
-        // System.out.println("str = |" + str + "|");
+        // return str;
+        str = list.display();
         return str;
     }
 
-    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
-        int size1 = list1.getSize();
-        LinkedList ans = new LinkedList();
-
-        return list1;
+    public static LinkedListStack addLargeNumbers(LinkedListStack list1, LinkedListStack list2) {
+        LinkedListStack ans = new LinkedListStack();
+        return ans;
     }
 }
 
@@ -131,8 +124,8 @@ public class Solution {
         String q = sc.nextLine();
         switch (input) {
         case "numberToDigits":
-            LinkedList pDigits = AddLargeNumbers.numberToDigits(p);
-            LinkedList qDigits = AddLargeNumbers.numberToDigits(q);
+            LinkedListStack pDigits = AddLargeNumbers.numberToDigits(p);
+            LinkedListStack qDigits = AddLargeNumbers.numberToDigits(q);
             System.out.println(AddLargeNumbers.digitsToNumber(pDigits));
             System.out.println(AddLargeNumbers.digitsToNumber(qDigits));
             break;
@@ -140,7 +133,7 @@ public class Solution {
         case "addLargeNumbers":
             pDigits = AddLargeNumbers.numberToDigits(p);
             qDigits = AddLargeNumbers.numberToDigits(q);
-            LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
+            LinkedListStack result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
             System.out.println(AddLargeNumbers.digitsToNumber(result));
             break;
         }
