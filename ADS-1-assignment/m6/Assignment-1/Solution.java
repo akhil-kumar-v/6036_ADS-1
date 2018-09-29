@@ -147,10 +147,10 @@ class AddLargeNumbers {
                         ptr1 = ptr1.getLink();
                         ptr2 = ptr2.getLink();
                         ptr1.setData(temp);
-                        System.out.println("dt " + ptr1.getData());
-                        System.out.println("((sum - rem) / (10)) = " + ((sum - rem) / (10)));
-                        System.out.println("temp = " + temp);
-                        System.out.println("after ptr1.getData()" + ptr1.getData());
+                        // System.out.println("dt " + ptr1.getData());
+                        // System.out.println("((sum - rem) / (10)) = " + ((sum - rem) / (10)));
+                        // System.out.println("temp = " + temp);
+                        // System.out.println("after ptr1.getData()" + ptr1.getData());
 
                     } else {
 
@@ -169,7 +169,7 @@ class AddLargeNumbers {
                         temp = ptr1.getData() + ((sum - rem) / (10));
 
                         ptr1.setData(temp);
-                        System.out.println("after ptr1.getData()" + ptr1.getData());
+                        // System.out.println("after ptr1.getData()" + ptr1.getData());
                     }
                 }
 
@@ -180,16 +180,19 @@ class AddLargeNumbers {
             while (ptr1 != null) {
                 sum = ptr1.getData() + ptr2.getData();
                 if (sum < 9) {
+                    ptr1 = ptr1.getLink();
+                    ptr2 = ptr2.getLink();
                     ans.listPush(sum);
                 } else if (sum > 9) {
                     rem = sum % 10;
                     ans.listPush(rem);
+                    ptr1 = ptr1.getLink();
+                    ptr2 = ptr2.getLink();
                     temp = ptr2.getData() + ((sum - rem) / (10));
                     ptr2.setData(temp);
 
                 }
-                ptr1 = ptr1.getLink();
-                ptr2 = ptr2.getLink();
+
             }
         }
 
