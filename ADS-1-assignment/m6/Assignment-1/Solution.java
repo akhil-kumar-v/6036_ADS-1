@@ -169,7 +169,7 @@ class AddLargeNumbers {
                         temp = ptr1.getData() + ((sum - rem) / (10));
 
                         ptr1.setData(temp);
-                        System.out.println("after ptr1.getData()" + ptr1.getData());
+                        // System.out.println("after ptr1.getData()" + ptr1.getData());
                     }
                 }
 
