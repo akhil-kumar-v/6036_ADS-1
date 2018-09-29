@@ -141,11 +141,12 @@ class AddLargeNumbers {
                 if (sum % 10 == 0) {
                     rem = sum % 10;
                     ans.listPush(rem);
+                    ptr1 = ptr1.getLink();
+                    ptr2 = ptr2.getLink();
                     int dt = ptr1.getData();
                     temp = ( dt ) + ((sum - rem) / (10));
                     // temp = 11;
-                    ptr1 = ptr1.getLink();
-                    ptr2 = ptr2.getLink();
+
                     ptr1.setData(temp);
                     // System.out.println("dt " + ptr1.getData());
                     // System.out.println("((sum - rem) / (10)) = " + ((sum - rem) / (10)));
