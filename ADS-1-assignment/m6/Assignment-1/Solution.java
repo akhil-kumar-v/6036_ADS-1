@@ -124,57 +124,57 @@ class AddLargeNumbers {
         int sum = 0;
         int rem = 0;
         int temp = 0;
-        if (s1 >= s2) {
-            // System.out.println("herer");
-            Node ptr1 = list1.top;
-            Node ptr2 = list2.top;
-            while (ptr2 != null || ptr1 !=null) {
-                // System.out.println("here also ptr2 = " + ptr2);
-                sum = ptr1.getData() + ptr2.getData();
-                // System.out.println("////////////////sum =" + sum);
-                if (sum < 9) {
-                    // System.out.println("<9");
-                    ans.listPush(sum);
+        // if (s1 >= s2) {
+        // System.out.println("herer");
+        Node ptr1 = list1.top;
+        Node ptr2 = list2.top;
+        while (ptr2 != null || ptr1 != null) {
+            // System.out.println("here also ptr2 = " + ptr2);
+            sum = ptr1.getData() + ptr2.getData();
+            // System.out.println("////////////////sum =" + sum);
+            if (sum < 9) {
+                // System.out.println("<9");
+                ans.listPush(sum);
+                ptr1 = ptr1.getLink();
+                ptr2 = ptr2.getLink();
+            } else if (sum > 9) {
+                if (sum % 10 == 0) {
+                    rem = sum % 10;
+                    ans.listPush(rem);
+                    int dt = ptr1.getData();
+                    temp = ( dt ) + ((sum - rem) / (10));
+                    // temp = 11;
                     ptr1 = ptr1.getLink();
                     ptr2 = ptr2.getLink();
-                } else if (sum > 9) {
-                    if (sum % 10 == 0) {
-                        rem = sum % 10;
-                        ans.listPush(rem);
-                        int dt = ptr1.getData();
-                        temp = ( dt ) + ((sum - rem) / (10));
-                        // temp = 11;
-                        ptr1 = ptr1.getLink();
-                        ptr2 = ptr2.getLink();
-                        ptr1.setData(temp);
-                        // System.out.println("dt " + ptr1.getData());
-                        // System.out.println("((sum - rem) / (10)) = " + ((sum - rem) / (10)));
-                        // System.out.println("temp = " + temp);
-                        // System.out.println("after ptr1.getData()" + ptr1.getData());
+                    ptr1.setData(temp);
+                    // System.out.println("dt " + ptr1.getData());
+                    // System.out.println("((sum - rem) / (10)) = " + ((sum - rem) / (10)));
+                    // System.out.println("temp = " + temp);
+                    // System.out.println("after ptr1.getData()" + ptr1.getData());
 
-                    } else {
+                } else {
 
-                        rem = sum % 10;
-                        // System.out.println(">9");
-                        // System.out.println("rem =" + rem);
-                        ans.listPush(rem);
-                        // System.out.println("ptr1.getData() " + ptr1.getData());
-                        // System.out.println("((sum - rem) / (10)) = " + ((sum - rem) / (10)));
-                        // System.out.println("temp = " + temp);
-                        // v
-                        //
+                    rem = sum % 10;
+                    // System.out.println(">9");
+                    // System.out.println("rem =" + rem);
+                    ans.listPush(rem);
+                    // System.out.println("ptr1.getData() " + ptr1.getData());
+                    // System.out.println("((sum - rem) / (10)) = " + ((sum - rem) / (10)));
+                    // System.out.println("temp = " + temp);
+                    // v
+                    //
 
-                        ptr1 = ptr1.getLink();
-                        ptr2 = ptr2.getLink();
-                        temp = ptr1.getData() + ((sum - rem) / (10));
+                    ptr1 = ptr1.getLink();
+                    ptr2 = ptr2.getLink();
+                    temp = ptr1.getData() + ((sum - rem) / (10));
 
-                        ptr1.setData(temp);
-                        // System.out.println("after ptr1.getData()" + ptr1.getData());
-                    }
+                    ptr1.setData(temp);
+                    // System.out.println("after ptr1.getData()" + ptr1.getData());
                 }
-
             }
+
         }
+        // }
         // else {
         //     Node ptr1 = list1.top;
         //     Node ptr2 = list2.top;
