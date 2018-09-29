@@ -1,6 +1,3 @@
-/*
- * Java Program to Implement Stack using Linked List
- */
 
 import java.util.*;
 
@@ -167,7 +164,12 @@ class AddLargeNumbers {
 
                     ptr1 = ptr1.getLink();
                     ptr2 = ptr2.getLink();
-                    temp = ptr1.getData() + ((sum - rem) / (10));
+                    try {
+                        temp = ptr1.getData() + ((sum - rem) / (10));
+
+                    } catch (Exception e) {
+                        break;
+                    }
 
                     ptr1.setData(temp);
                     // System.out.println("after ptr1.getData()" + ptr1.getData());
