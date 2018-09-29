@@ -128,7 +128,7 @@ class AddLargeNumbers {
             // System.out.println("herer");
             Node ptr1 = list1.top;
             Node ptr2 = list2.top;
-            while (ptr2 != null) {
+            while (ptr2 != null || ptr1 !=null) {
                 // System.out.println("here also ptr2 = " + ptr2);
                 sum = ptr1.getData() + ptr2.getData();
                 // System.out.println("////////////////sum =" + sum);
@@ -169,32 +169,33 @@ class AddLargeNumbers {
                         temp = ptr1.getData() + ((sum - rem) / (10));
 
                         ptr1.setData(temp);
-                        // System.out.println("after ptr1.getData()" + ptr1.getData());
+                        System.out.println("after ptr1.getData()" + ptr1.getData());
                     }
                 }
 
             }
-        } else {
-            Node ptr1 = list1.top;
-            Node ptr2 = list2.top;
-            while (ptr1 != null) {
-                sum = ptr1.getData() + ptr2.getData();
-                if (sum < 9) {
-                    ptr1 = ptr1.getLink();
-                    ptr2 = ptr2.getLink();
-                    ans.listPush(sum);
-                } else if (sum > 9) {
-                    rem = sum % 10;
-                    ans.listPush(rem);
-                    ptr1 = ptr1.getLink();
-                    ptr2 = ptr2.getLink();
-                    temp = ptr2.getData() + ((sum - rem) / (10));
-                    ptr2.setData(temp);
-
-                }
-
-            }
         }
+        // else {
+        //     Node ptr1 = list1.top;
+        //     Node ptr2 = list2.top;
+        //     while (ptr1 != null) {
+        //         sum = ptr1.getData() + ptr2.getData();
+        //         if (sum < 9) {
+        //             ptr1 = ptr1.getLink();
+        //             ptr2 = ptr2.getLink();
+        //             ans.listPush(sum);
+        //         } else if (sum > 9) {
+        //             rem = sum % 10;
+        //             ans.listPush(rem);
+        //             ptr1 = ptr1.getLink();
+        //             ptr2 = ptr2.getLink();
+        //             temp = ptr2.getData() + ((sum - rem) / (10));
+        //             ptr2.setData(temp);
+
+        //         }
+
+        //     }
+        // }
 
 
 
