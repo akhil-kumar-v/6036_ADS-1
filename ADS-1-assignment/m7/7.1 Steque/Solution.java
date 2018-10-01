@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
-
+/**
+ * Class for node.
+ */
 
 class Node {
     int data;
@@ -30,11 +32,22 @@ class Node {
     //     return linkR;
     // }
 }
-
+/**
+ * Class for linked.
+ */
 class Linked {
-    Node head;
-    Node tail;
-    int size;
+    /**
+     * Node head
+     */
+    private Node head;
+    /**
+     * Node Tail
+     */
+    private Node tail;
+    /**
+     * Int size
+     */
+    private int size;
     Linked() {
         head = null;
         tail = null;
@@ -59,6 +72,9 @@ class Linked {
         }
         printLinked();
     }
+    /**
+     * Pops from lisr
+     */
     void pop() {
         if (size <= 0) {
             System.out.println("Steque is empty.");
@@ -78,8 +94,13 @@ class Linked {
         // printLinked();
 
     }
-    void push(int da) {
-        Node ptr = new Node(da, null);
+    /**
+     * Push into List
+     *
+     * @param      data  The data
+     */
+    void push(final int data) {
+        Node ptr = new Node(data, null);
 
         if (head == null) {
             head = ptr;
@@ -89,11 +110,14 @@ class Linked {
             // Node ne = head;
             // head.setLink(null,ne)
             size++;
-            ptr.setLink( head);
+            ptr.setLink(head);
             head = ptr;
         }
         printLinked();
     }
+    /**
+     * Prints List
+     */
     void printLinked() {
         Node ptr = head;
         Node temp = ptr;
@@ -112,8 +136,7 @@ class Linked {
 
                 temp = ptr;
                 ptr = ptr.getLink();
-
-                System.out.print(", " + ptr.getData() );
+                System.out.print(", " + ptr.getData());
                 // System.out.println("ptr = " + ptr);
 
             }
@@ -126,12 +149,22 @@ class Linked {
 
     }
 }
-
+/**
+ * Class Solution.
+ */
 final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
-    public static void main(String[] args) {
+    /**
+     * Main Funtion.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         sc.nextLine();
@@ -170,7 +203,9 @@ final class Solution {
             try {
                 while ((str = sc.nextLine() ) != null) {
                     // System.out.println("test");
-                    if (str.length() == 0) break;
+                    if (str.length() == 0) {
+                        break;
+                    }
                     String[] line = str.split(" ");
                     switch (line[0]) {
                     case "push":
@@ -182,11 +217,13 @@ final class Solution {
                     case "enqueue":
                         li.enqueue(Integer.parseInt(line[1]));
                         break;
+                    default:
+
                     }
                 }
                 t--;
                 System.out.println();
-            } catch (Exception r){
+            } catch (Exception r) {
                 // t--;
                 break;
             }
