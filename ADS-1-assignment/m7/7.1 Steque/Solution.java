@@ -37,26 +37,33 @@ class Node {
  */
 class Linked {
     /**
-     * Node head
+     * Node head.
      */
     private Node head;
     /**
-     * Node Tail
+     * Node Tail.
      */
     private Node tail;
     /**
-     * Int size
+     * Int size.
      */
     private int size;
+    /**
+     * Constructs the object.
+     */
     Linked() {
         head = null;
         tail = null;
         size = -1;
     }
-
-    void enqueue(int da) {
+    /**
+     * enqueue.
+     *
+     * @param      data  The data
+     */
+    void enqueue(final int data) {
         // System.out.println("-----------------------");
-        Node ptr = new Node(da,  null);
+        Node ptr = new Node(data,  null);
         // System.out.println("ptr created now"+ptr);
         if (head == null) {
             // System.out.println(" i ");
@@ -73,7 +80,7 @@ class Linked {
         printLinked();
     }
     /**
-     * Pops from lisr
+     * Pops from list.
      */
     void pop() {
         if (size <= 0) {
@@ -95,7 +102,7 @@ class Linked {
 
     }
     /**
-     * Push into List
+     * Push into List.
      *
      * @param      data  The data
      */
@@ -116,7 +123,7 @@ class Linked {
         printLinked();
     }
     /**
-     * Prints List
+     * Prints List.
      */
     void printLinked() {
         Node ptr = head;
@@ -201,7 +208,7 @@ final class Solution {
             // System.out.println("sdsds");
             Linked li = new Linked();
             try {
-                while ((str = sc.nextLine() ) != null) {
+                while ((str = sc.nextLine()) != null) {
                     // System.out.println("test");
                     if (str.length() == 0) {
                         break;
