@@ -5,7 +5,13 @@ import java.util.Scanner;
  */
 
 class Node {
+    /**
+     * Int data.
+     */
     private int data;
+    /**
+     * Node link.
+     */
     private Node linkF;
     /**
      * Node Constructer.
@@ -13,7 +19,7 @@ class Node {
      * @param      dataNew   The data new
      * @param      linkNew1  The link new 1
      */
-    Node(final int dataNew,final Node linkNew1) {
+    Node(final int dataNew, final Node linkNew1) {
         data = dataNew;
         linkF = linkNew1;
         // linkR = linkNew2;
