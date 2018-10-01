@@ -165,26 +165,32 @@ final class Solution {
 
         // }
         while (t > 0) {
+            // System.out.println("sdsds");
             Linked li = new Linked();
-
-            while ((str = sc.nextLine() ) != null) {
-                // System.out.println("test");
-                if (str.length() == 0) break;
-                String[] line = str.split(" ");
-                switch (line[0]) {
-                case "push":
-                    li.push(Integer.parseInt(line[1]));
-                    break;
-                case "pop":
-                    li.pop();
-                    break;
-                case "enqueue":
-                    li.enqueue(Integer.parseInt(line[1]));
-                    break;
+            try {
+                while ((str = sc.nextLine() ) != null) {
+                    // System.out.println("test");
+                    if (str.length() == 0) break;
+                    String[] line = str.split(" ");
+                    switch (line[0]) {
+                    case "push":
+                        li.push(Integer.parseInt(line[1]));
+                        break;
+                    case "pop":
+                        li.pop();
+                        break;
+                    case "enqueue":
+                        li.enqueue(Integer.parseInt(line[1]));
+                        break;
+                    }
                 }
+                t--;
+                System.out.println();
+            } catch (Exception r){
+                // t--;
+                break;
             }
-            t--;
-            System.out.println();
+
         }
 
     }
