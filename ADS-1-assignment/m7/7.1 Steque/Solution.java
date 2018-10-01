@@ -7,23 +7,47 @@ import java.util.Scanner;
 class Node {
     int data;
     Node linkF;
-    // Node linkR;
+    /**
+     * Node Constructer.
+     *
+     * @param      dataNew   The data new
+     * @param      linkNew1  The link new 1
+     */
     Node(int dataNew, Node linkNew1) {
         data = dataNew;
         linkF = linkNew1;
         // linkR = linkNew2;
     }
+    /**
+     * Sets the data.
+     *
+     * @param      d     { parameter_description }
+     */
     void setData(int d) {
         data = d;
     }
-
+    /**
+     * Sets the link.
+     *
+     * @param      link1  The link 1
+     */
     void setLink(Node link1) {
         linkF = link1;
         // linkR = link2;
     }
+    /**
+     * Gets the data.
+     *
+     * @return     The data.
+     */
     int getData() {
         return data;
     }
+    /**
+     * Gets the link.
+     *
+     * @return     The link.
+     */
     Node getLink() {
         return linkF;
     }
