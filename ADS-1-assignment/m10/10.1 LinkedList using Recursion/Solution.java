@@ -49,7 +49,7 @@ class LinkedList {
         tail = null;
         size = 0;
         count = 0;
-        temp = head.link;
+        // temp = head.link;
 
         // top = -1;
     }
