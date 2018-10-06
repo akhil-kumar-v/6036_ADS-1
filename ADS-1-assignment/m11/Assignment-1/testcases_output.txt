@@ -144,7 +144,7 @@ Raj,87,BC
 Aditya,80,ST
 priya,72,SC
 ----------------------------------------
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 divya,99,Open
 tanvi,90,Open
@@ -175,7 +175,6 @@ Abhishek,60,BC
 divya,99,Open
 Aditya,80,ST
 priya,76,SC
-Ajay,76,Open
 ----------------------------------------
 ########## Testcase 3: Passed ##########
 Expected Output: 

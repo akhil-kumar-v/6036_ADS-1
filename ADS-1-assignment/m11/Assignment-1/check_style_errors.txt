@@ -80,9 +80,13 @@ Starting audit...
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:177:59: ',' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:178:38: '6' is a magic number. [MagicNumber]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:193:52: ')' is preceded with whitespace. [ParenPad]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:210:56: ')' is preceded with whitespace. [ParenPad]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:216:56: ')' is preceded with whitespace. [ParenPad]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:222:56: ')' is preceded with whitespace. [ParenPad]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:231:56: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:211:56: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:219:56: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:226:56: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:237:56: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:240:15: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:240:23: '==' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:240:25: '==' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:240:27: '{' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 85 errors.
+Checkstyle ends with 89 errors.

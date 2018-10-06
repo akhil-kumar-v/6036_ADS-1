@@ -191,6 +191,7 @@ class Solution {
             System.out.println(cl.scores[j].name + ","
                                + cl.scores[j].total + ","
                                + cl.scores[j].caste );
+            nTotVac--;
             // if()
             if ((cl.scores[j].caste).equals("SC")) {
                 scCount++;
@@ -209,27 +210,35 @@ class Solution {
                                    + cl.scores[i].total + ","
                                    + cl.scores[i].caste );
                 bcVac--;
+                nTotVac--;
             }
+
             if ((cl.scores[i].caste).equals("SC") && scVac > 0) {
                 System.out.println(cl.scores[i].name + ","
                                    + cl.scores[i].total + ","
                                    + cl.scores[i].caste );
                 scVac--;
+                nTotVac--;
             }
             if ((cl.scores[i].caste).equals("ST") && stVac > 0) {
                 System.out.println(cl.scores[i].name + ","
                                    + cl.scores[i].total + ","
                                    + cl.scores[i].caste );
                 stVac--;
+                nTotVac--;
             }
             // System.out.println("stVac =" + stVac);
             if ((cl.scores[i].caste).equals("Open") && (stVac - stCount) == 0) {
                 scVac--;
                 stCount++;
+                nTotVac--;
                 System.out.println(cl.scores[i].name + ","
                                    + cl.scores[i].total + ","
                                    + cl.scores[i].caste );
                 // scVac--;
+            }
+            if(nTotVac==0){
+                break;
             }
         }
 
