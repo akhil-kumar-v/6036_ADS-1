@@ -179,9 +179,9 @@ class Solution {
             cl.addToList(s);
             // System.out.println("qq ="+Arrays.toString(line));
         }
-        System.out.println(cl);
         // System.out.println();
         cl.selectionSort();
+        System.out.println(cl);
 
         // for (int i = 0; i < nTotVac; i++) {
 
