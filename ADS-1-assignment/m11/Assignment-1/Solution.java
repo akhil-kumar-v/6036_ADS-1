@@ -68,16 +68,16 @@ class Score {
         // if (this.s1 < c.s1) {
         //     return -1;
         // }
-        // if (this.dob[0] < c.dob[0]
-        //         && this.dob[1] < c.dob[1]
-        //         && this.dob[2] < c.dob[2]) {
-        //     return 1;
-        // }
-        // if (this.dob[0] > c.dob[0]
-        //         && this.dob[1] > c.dob[1]
-        //         && this.dob[2] > c.dob[2]) {
-        //     return -1;
-        // }
+        if (this.dob[0] >= c.dob[0]
+                && this.dob[1] >= c.dob[1]
+                && this.dob[2] >= c.dob[2]) {
+            return 1;
+        }
+        if (this.dob[0] < c.dob[0]
+                && this.dob[1] < c.dob[1]
+                && this.dob[2] < c.dob[2]) {
+            return -1;
+        }
         return 0;
     }
 }
