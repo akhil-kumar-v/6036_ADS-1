@@ -79,9 +79,10 @@ Starting audit...
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:177:55: '5' is a magic number. [MagicNumber]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:177:59: ',' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:178:38: '6' is a magic number. [MagicNumber]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:191:52: ')' is preceded with whitespace. [ParenPad]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:200:56: ')' is preceded with whitespace. [ParenPad]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:206:56: ')' is preceded with whitespace. [ParenPad]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:212:56: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:193:52: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:210:56: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:216:56: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:222:56: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\Assignment-1\Solution.java:231:56: ')' is preceded with whitespace. [ParenPad]
 Audit done.
-Checkstyle ends with 84 errors.
+Checkstyle ends with 85 errors.

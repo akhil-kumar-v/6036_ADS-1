@@ -184,11 +184,21 @@ class Solution {
         System.out.println(cl);
 
         // for (int i = 0; i < nTotVac; i++) {
-
+        int stCount = 0;
+        int scCount = 0;
+        int bcCount = 0;
         for (int j = 0; j < nUnVac; j++) {
             System.out.println(cl.scores[j].name + ","
                                + cl.scores[j].total + ","
                                + cl.scores[j].caste );
+            // if()
+            if ((cl.scores[j].caste).equals("SC")) {
+                scCount++;
+            } else if ((cl.scores[j].caste).equals("ST")) {
+                stCount++;
+            } else if ((cl.scores[j].caste).equals("BC")) {
+                bcCount++;
+            }
         }
 
         for (int i = nUnVac; i < cl.size; i++) {
@@ -211,6 +221,15 @@ class Solution {
                                    + cl.scores[i].total + ","
                                    + cl.scores[i].caste );
                 stVac--;
+            }
+            // System.out.println("stVac =" + stVac);
+            if ((cl.scores[i].caste).equals("Open") && (stVac - stCount) == 0) {
+                scVac--;
+                stCount++;
+                System.out.println(cl.scores[i].name + ","
+                                   + cl.scores[i].total + ","
+                                   + cl.scores[i].caste );
+                // scVac--;
             }
         }
 
