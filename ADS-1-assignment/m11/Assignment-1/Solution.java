@@ -56,10 +56,10 @@ class Score {
         if (this.s3 < c.s3) {
             return -1;
         }
-        if (this.s2 < c.s2) {
+        if (this.s2 > c.s2) {
             return 1;
         }
-        if (this.s2 > c.s2) {
+        if (this.s2 < c.s2) {
             return -1;
         }
         // if (this.s1 > c.s1) {
@@ -68,16 +68,16 @@ class Score {
         // if (this.s1 < c.s1) {
         //     return -1;
         // }
-        if (this.dob[0] < c.dob[0]
-                && this.dob[1] < c.dob[1]
-                && this.dob[2] < c.dob[2]) {
-            return 1;
-        }
-        if (this.dob[0] > c.dob[0]
-                && this.dob[1] > c.dob[1]
-                && this.dob[2] > c.dob[2]) {
-            return -1;
-        }
+        // if (this.dob[0] < c.dob[0]
+        //         && this.dob[1] < c.dob[1]
+        //         && this.dob[2] < c.dob[2]) {
+        //     return 1;
+        // }
+        // if (this.dob[0] > c.dob[0]
+        //         && this.dob[1] > c.dob[1]
+        //         && this.dob[2] > c.dob[2]) {
+        //     return -1;
+        // }
         return 0;
     }
 }
@@ -85,12 +85,26 @@ class Score {
 class CreateList {
     Score[] scores;
     int size;
+    int bc;
+    int sc;
+    int st;
     CreateList() {
         size = 0;
+        bc = 0;
+        st = 0;
+        sc = 0;
         scores = new Score[100];
     }
     void addToList(Score s) {
         scores[size++] = s;
+        if ((s.caste).equals("SC")) {
+            sc++;
+        } else if ((s.caste).equals("ST")) {
+            st++;
+        } else if ((s.caste).equals("BC")) {
+            bc++;
+        }
+
     }
     public String toString() {
         String s = "";
@@ -109,8 +123,21 @@ class CreateList {
             }
             exch(scores, i, min);
         }
+        // Solution ss = new Solution();
+        // int bccount= ss.bcVac;
+        // int sccount= ss.scVac;
+        // int stcount= ss.stVac;
+        // System.out.println("stcount =" + stcount);
+        // System.out.println("bccount =" + bccount);
+        // System.out.println("sccount =" + sccount);
+        // for (int i = 0; i < size; i++) {
+        //     System.out.println(scores[i].name + ","
+        //                        + scores[i].total + ","
+        //                        + scores[i].caste );
+        // }
+
     }
-    public void exch(Score[] teams, int i, int j) {
+    public void exch(Score[] scores, int i, int j) {
         Score ct = scores[j];
         scores[j] = scores[i];
         scores[i] = ct;
@@ -121,6 +148,9 @@ class CreateList {
 }
 
 class Solution {
+    // int bcVac;
+    // int scVac;
+    // int stVac;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -150,8 +180,58 @@ class Solution {
             // System.out.println("qq ="+Arrays.toString(line));
         }
         System.out.println(cl);
-        System.out.println();
+        // System.out.println();
         cl.selectionSort();
-        System.out.println(cl);
+
+        // for (int i = 0; i < nTotVac; i++) {
+
+        for (int j = 0; j < nUnVac; j++) {
+            System.out.println(cl.scores[j].name + ","
+                               + cl.scores[j].total + ","
+                               + cl.scores[j].caste );
+        }
+
+        for (int i = nUnVac; i < cl.size; i++) {
+            // System.out.println("test");
+            // System.out.println((cl.scores[i].caste));
+            if ((cl.scores[i].caste).equals("BC") && bcVac > 0) {
+                System.out.println(cl.scores[i].name + ","
+                                   + cl.scores[i].total + ","
+                                   + cl.scores[i].caste );
+                bcVac--;
+            }
+            if ((cl.scores[i].caste).equals("SC") && scVac > 0) {
+                System.out.println(cl.scores[i].name + ","
+                                   + cl.scores[i].total + ","
+                                   + cl.scores[i].caste );
+                scVac--;
+            }
+            if ((cl.scores[i].caste).equals("ST") && stVac > 0) {
+                System.out.println(cl.scores[i].name + ","
+                                   + cl.scores[i].total + ","
+                                   + cl.scores[i].caste );
+                stVac--;
+            }
+        }
+
+        // if (cl.scores[i].caste.equals("BC") && bcVac > 0) {
+        //     System.out.println(cl.scores[i].name + ","
+        //                        + cl.scores[i].total + ","
+        //                        + cl.scores[i].caste );
+        //     bcVac--;
+        // }
+        // if (cl.scores[i].caste.equals("SC") && scVac > 0) {
+        //     System.out.println(cl.scores[i].name + ","
+        //                        + cl.scores[i].total + ","
+        //                        + cl.scores[i].caste );
+        //     scVac--;
+        // }
+        // if (cl.scores[i].caste.equals("ST") && stVac > 0) {
+        //     System.out.println(cl.scores[i].name + ","
+        //                        + cl.scores[i].total + ","
+        //                        + cl.scores[i].caste );
+        //     stVac--;
+        // }
+        // }
     }
 }
