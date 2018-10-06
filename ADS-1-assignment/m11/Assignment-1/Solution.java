@@ -68,16 +68,30 @@ class Score {
         // if (this.s1 < c.s1) {
         //     return -1;
         // }
-        if (this.dob[0] >= c.dob[0]
-                && this.dob[1] >= c.dob[1]
-                && this.dob[2] >= c.dob[2]) {
+        if (this.dob[0] > c.dob[0]) {
             return 1;
         }
-        if (this.dob[0] < c.dob[0]
-                && this.dob[1] < c.dob[1]
-                && this.dob[2] < c.dob[2]) {
+        if (this.dob[0] <= c.dob[0]) {
+            if (this.dob[0] == c.dob[0] && this.dob[1] > c.dob[1]) {
+                return 1;
+            } else {
+                if (this.dob[1] == c.dob[1] && this.dob[2] > c.dob[2]) {
+                    return 1;
+                }
+            }
             return -1;
         }
+
+        // if (this.dob[0] >= c.dob[0]
+        //         && this.dob[1] >= c.dob[1]
+        //         && this.dob[2] >= c.dob[2]) {
+        //     return 1;
+        // }
+        // if (this.dob[0] < c.dob[0]
+        //         && this.dob[1] < c.dob[1]
+        //         && this.dob[2] < c.dob[2]) {
+        //     return -1;
+        // }
         return 0;
     }
 }
@@ -237,11 +251,27 @@ class Solution {
                                    + cl.scores[i].caste );
                 // scVac--;
             }
-            if(nTotVac==0){
+            if (nTotVac == 0) {
                 break;
             }
         }
+        // System.out.println("nTotVac =" + nTotVac);
+        // if (nTotVac > 0) {
+        //     for (int i = nTotVac; i < nTotVac; i++) {
+        //         System.out.println(cl.scores[i].name + ","
+        //                            + cl.scores[i].total + ","
+        //                            + cl.scores[i].caste );
+        //     }
 
+        // }
+        int i = nTotVac+1;
+        while (nTotVac > 0) {
+            System.out.println(cl.scores[i].name + ","
+                               + cl.scores[i].total + ","
+                               + cl.scores[i].caste );
+            i++;
+            nTotVac--;
+        }
         // if (cl.scores[i].caste.equals("BC") && bcVac > 0) {
         //     System.out.println(cl.scores[i].name + ","
         //                        + cl.scores[i].total + ","
