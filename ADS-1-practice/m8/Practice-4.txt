@@ -1,0 +1,1 @@
+Selection sort will be easy as it has few no of changes
