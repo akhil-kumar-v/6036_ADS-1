@@ -1,8 +1,2 @@
 Starting audit...
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:11: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:26: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:54: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:83: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:136: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 5 errors.

@@ -9,7 +9,7 @@ class Sorting {
     Sorting() {
     }
     /**
-     * Method for insertion
+     * Method for insertion.
      *
      * @param      arr   The arr
      * @param      low   The low
@@ -24,7 +24,7 @@ class Sorting {
         }
     }
     /**
-     * Swapping items
+     * Swapping items.
      *
      * @param      arr   The arr
      * @param      j     { parameter_description }
@@ -52,7 +52,7 @@ class Sorting {
         return str;
     }
     /**
-     * Sort Function
+     * Sort Function.
      *
      * @param      arr     The arr
      * @param      low     The low
@@ -81,7 +81,7 @@ class Sorting {
         sort(array, 0, array.length - 1, cutOff);
     }
     /**
-     * Partition the Array
+     * Partition the Array.
      *
      * @param      arr   The arr
      * @param      low   The low
@@ -134,7 +134,7 @@ public final class Solution {
     private Solution() {
     }
     /**
-     * Main Function
+     * Main Function.
      *
      * @param      args  The arguments
      */
