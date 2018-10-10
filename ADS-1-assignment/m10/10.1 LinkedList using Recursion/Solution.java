@@ -53,6 +53,7 @@ class LinkedList {
 
         // top = -1;
     }
+
     void insertAt(int pos, int data) {
         insertAtpos(head, pos, data);
 
@@ -156,7 +157,14 @@ class Solution {
             String[] line = sc.nextLine().split(" ");
             switch (line[0]) {
             case "insertAt":
-                li.insertAt(Integer.parseInt( line[1]), Integer.parseInt( line[2]));
+                if (Integer.parseInt(line[1]) < 0 || Integer.parseInt(
+                            line[1]) > li.size + 1) {
+                    System.out.println("Can't insert at this position.");
+                } else {
+                    li.insertAt(Integer.parseInt( line[1]), Integer.parseInt( line[2]));
+                    li.printList();
+                    //     System.out.println();
+                }
                 break;
             case "reverse":
                 li.reverse();
