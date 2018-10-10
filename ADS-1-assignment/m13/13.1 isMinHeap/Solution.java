@@ -60,7 +60,7 @@ class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String dataType = sc.nextLine();
         int testcases = Integer.parseInt(sc.nextLine());
