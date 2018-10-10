@@ -27,6 +27,8 @@ class PriorityQueue<E extends Comparable<E>> {
      *
      * @return     True if minimum heap, False otherwise.
      */
+    // Time complexity = O(log N).
+
     public boolean isMinHeap() {
         for (int i = 1; i < arr.length; i++) {
             if (2 * i < arr.length && less(2 * i, i)) {
@@ -46,6 +48,8 @@ class PriorityQueue<E extends Comparable<E>> {
      *
      * @return     { description_of_the_return_value }
      */
+    // Time complexity = O(1).
+
     public boolean less(final int a, final int b) {
         return arr[a].compareTo(arr[b]) < 0;
     }
@@ -67,6 +71,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
+    // Time complexity = N
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String dataType = sc.nextLine();
