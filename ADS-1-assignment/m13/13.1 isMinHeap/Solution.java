@@ -54,7 +54,7 @@ class PriorityQueue<E extends Comparable<E>> {
 /**
  * Class for solution.
  */
-final class Solution {
+class Solution {
 
     /**
      * Main Function.
