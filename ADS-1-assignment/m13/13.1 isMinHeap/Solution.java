@@ -18,7 +18,7 @@ class PriorityQueue<E extends Comparable<E>> {
      *
      * @param      array  The array
      */
-    PriorityQueue(E[] array) {
+    PriorityQueue(final E[] array) {
         this.arr = array;
         size = 0;
     }
@@ -46,7 +46,7 @@ class PriorityQueue<E extends Comparable<E>> {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean less(int a, int b) {
+    public boolean less(final int a, final int b) {
         return arr[a].compareTo(arr[b]) < 0;
     }
 }
