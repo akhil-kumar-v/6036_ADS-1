@@ -90,6 +90,7 @@ class LinkedList {
     /**
      * Delete List Front.
      */
+    // time complexity is O(1)
     public void deleteFront() {
         if (head != null) {
             head = head.next;
@@ -99,6 +100,7 @@ class LinkedList {
     /**
      * Delete List Back.
      */
+    // time complexity is O(N)
     public void deleteBack() {
         if (tail != null) {
             Node temp = null;
@@ -120,6 +122,8 @@ class LinkedList {
      *
      * @param      value  The value
      */
+    // time complexity is O(1)
+
     public void insertBack(final int value) {
         if (tail == null) {
             tail = new Node();
@@ -140,6 +144,8 @@ class LinkedList {
      *
      * @param      value  The value
      */
+    // time complexitty is O(1)
+
     public void insertFront(final int value) {
         if (head == null) {
             head = new Node();
@@ -160,6 +166,8 @@ class LinkedList {
      * @param      pos    The position
      * @param      value  The value
      */
+    // time complexity is O(1)
+
     public void insertAt(final int pos, final int value) {
         insertAt(head, pos, value);
     }
@@ -170,6 +178,8 @@ class LinkedList {
      * @param      pos    The position
      * @param      value  The value
      */
+    // time complexity is O(N)
+
     public void insertAt(final Node head1, final int pos, final int value) {
         if (pos == 0) {
             insertFront(value);
@@ -198,6 +208,8 @@ class LinkedList {
     /**
      * Reversers the list.
      */
+    // time complexity is O(1)
+
     public void reverse() {
         head = reverseRecursive(head);
     }
@@ -208,6 +220,8 @@ class LinkedList {
      *
      * @return     { description_of_the_return_value }
      */
+    // time complexity is O(N)
+
     private Node reverseRecursive(final Node head1) {
         if (head1 == null || head1.next == null) {
             return head1;
@@ -222,6 +236,8 @@ class LinkedList {
      *
      * @return     { description_of_the_return_value }
      */
+    // time complexity is O(1)
+
     public int size() {
         return size;
     }
@@ -230,6 +246,8 @@ class LinkedList {
      *
      * @return     { description_of_the_return_value }
      */
+    // time complexity is O(N)
+
     public String displayAll() {
         if (size != 0) {
             String str = "";
