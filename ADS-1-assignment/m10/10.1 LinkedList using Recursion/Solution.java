@@ -56,22 +56,28 @@ class LinkedList {
  */
     private Node head;
     /**
-     * Node tail
+     * Node tail.
      */
     private Node tail;
     /**
-     * Int size
+     * Int size.
      */
     private int size = 0;
     /**
-     * int index
+     * int index.
      */
     private static int index = 0;
     /**
      * Class for node.
      */
     private class Node {
+        /**
+         * Int value.
+         */
         private int value;
+        /**
+         * Int next.
+         */
         private Node next;
     }
     /**

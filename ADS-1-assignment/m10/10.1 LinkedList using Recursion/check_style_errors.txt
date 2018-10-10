@@ -1,17 +1,12 @@
 Starting audit...
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:58: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:62: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:66: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:74:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:75:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:157:26: Parameter pos should be final. [FinalParameters]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:157:35: Parameter value should be final. [FinalParameters]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:167:26: Parameter head should be final. [FinalParameters]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:167:31: 'head' hides a field. [HiddenField]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:167:37: Parameter pos should be final. [FinalParameters]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:167:46: Parameter value should be final. [FinalParameters]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:173:18: Name 'new_node' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:205:35: Parameter head should be final. [FinalParameters]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:205:40: 'head' hides a field. [HiddenField]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:163:26: Parameter pos should be final. [FinalParameters]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:163:35: Parameter value should be final. [FinalParameters]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:173:26: Parameter head should be final. [FinalParameters]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:173:31: 'head' hides a field. [HiddenField]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:173:37: Parameter pos should be final. [FinalParameters]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:173:46: Parameter value should be final. [FinalParameters]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:179:18: Name 'new_node' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:211:35: Parameter head should be final. [FinalParameters]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:211:40: 'head' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 9 errors.
