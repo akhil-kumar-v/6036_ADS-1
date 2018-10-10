@@ -170,22 +170,22 @@ class LinkedList {
      * @param      pos    The position
      * @param      value  The value
      */
-    public void insertAt(final Node head,final int pos,final int value) {
+    public void insertAt(final Node head1,final int pos,final int value) {
         if (pos == 0) {
             insertFront(value);
             return;
         }
         if (index + 1 == pos) {
             Node new_node = new Node();
-            // Node temp = head;
+            // Node temp = head1;
             new_node.value = value;
-            new_node.next = head.next;
-            head.next = new_node;
+            new_node.next = head1.next;
+            head1.next = new_node;
             index = 0;
             return;
         }
         index++;
-        insertAt(head.next, pos, value);
+        insertAt(head1.next, pos, value);
     }
     /**
      * Determines if empty.
