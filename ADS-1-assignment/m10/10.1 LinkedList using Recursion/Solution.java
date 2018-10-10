@@ -160,7 +160,7 @@ class LinkedList {
      * @param      pos    The position
      * @param      value  The value
      */
-    public void insertAt(int pos, int value) {
+    public void insertAt(final int pos,final int value) {
         insertAt(head, pos, value);
     }
     /**
@@ -170,7 +170,7 @@ class LinkedList {
      * @param      pos    The position
      * @param      value  The value
      */
-    public void insertAt(Node head, int pos, int value) {
+    public void insertAt(final Node head,final int pos,final int value) {
         if (pos == 0) {
             insertFront(value);
             return;
