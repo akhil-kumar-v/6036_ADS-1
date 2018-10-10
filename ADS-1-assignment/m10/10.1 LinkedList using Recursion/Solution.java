@@ -1,12 +1,21 @@
 import java.util.Scanner;
 
 
-
+/**
+ * Solution Class.
+ */
 public final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
-
+    /**
+     * Main Function.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         LinkedList ll = new LinkedList();
         Scanner sc = new Scanner(System.in);
@@ -38,29 +47,52 @@ public final class Solution {
         }
     }
 }
-
+/**
+ * List of linkeds.
+ */
 class LinkedList {
+/**
+ * Node head.
+ */
     private Node head;
+    /**
+     * Node tail
+     */
     private Node tail;
+    /**
+     * Int size
+     */
     private int size = 0;
+    /**
+     * int index
+     */
     private static int index = 0;
+    /**
+     * Class for node.
+     */
     private class Node {
         private int value;
         private Node next;
     }
-
+    /**
+     * Constructs the object.
+     */
     LinkedList() {
         head = null;
         tail = null;
     }
-
+    /**
+     * Delete List Front.
+     */
     public void deleteFront() {
         if (head != null) {
             head = head.next;
             size--;
         }
     }
-
+    /**
+     * Delete List Back.
+     */
     public void deleteBack() {
         if (tail != null) {
             Node temp = null;
@@ -77,7 +109,11 @@ class LinkedList {
             // return item;
         }
     }
-
+    /**
+     * Insert List Back.
+     *
+     * @param      value  The value
+     */
     public void insertBack(final int value) {
         if (tail == null) {
             tail = new Node();
@@ -93,7 +129,11 @@ class LinkedList {
         }
         size++;
     }
-
+    /**
+     * Insert List Front.
+     *
+     * @param      value  The value
+     */
     public void insertFront(final int value) {
         if (head == null) {
             head = new Node();
@@ -108,9 +148,22 @@ class LinkedList {
         }
         size++;
     }
+    /**
+     * Insert Function.
+     *
+     * @param      pos    The position
+     * @param      value  The value
+     */
     public void insertAt(int pos, int value) {
         insertAt(head, pos, value);
     }
+    /**
+     * Insert Function Overridding.
+     *
+     * @param      head   The head
+     * @param      pos    The position
+     * @param      value  The value
+     */
     public void insertAt(Node head, int pos, int value) {
         if (pos == 0) {
             insertFront(value);
@@ -128,12 +181,27 @@ class LinkedList {
         index++;
         insertAt(head.next, pos, value);
     }
+    /**
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
+     */
     public boolean isEmpty() {
         return head == null;
     }
+    /**
+     * Reversers the list.
+     */
     public void reverse() {
         head = reverseRecursive(head);
     }
+    /**
+     * Helper for Reverse.
+     *
+     * @param      head  The head
+     *
+     * @return     { description_of_the_return_value }
+     */
     private Node reverseRecursive(Node head) {
         if (head == null || head.next == null) {
             return head;
@@ -143,9 +211,19 @@ class LinkedList {
         head.next = null;
         return temp;
     }
+    /**
+     * Returns the size.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
         return size;
     }
+    /**
+     * Displays the Linked List.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String displayAll() {
         if (size != 0) {
             String str = "";
