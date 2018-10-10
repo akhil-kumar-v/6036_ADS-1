@@ -1,176 +1,161 @@
 import java.util.Scanner;
 
-class InvalidPositionException extends Exception {
-    public String toString() {
-        return "Can't insert at this position.";
-    }
-}
-class NoElementException extends Exception {
-    public String toString() {
-        return "No elements to reverse.";
-    }
-}
-class Node {
-    Node link;
-    int value;
-    Node(int data) {
-        link = null;
-        value = data;
-    }
-    // Node(int data, Node givenLink) {
-    //     link = givenLink;
-    //     value = data;
 
-    // }
-    void setLink(Node l) {
-        link = l;
+
+public final class Solution {
+    private Solution() {
+
     }
-    void setData(int d) {
-        value = d;
-    }
-    int getData() {
-        return value;
-    }
-    Node getLink() {
-        return link;
+
+    public static void main(final String[] args) {
+        LinkedList ll = new LinkedList();
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            String[] tokens = line.split(" ");
+            switch (tokens[0]) {
+            case "insertAt":
+                if (Integer.parseInt(tokens[1]) < 0 || Integer.parseInt(
+                            tokens[1]) > ll.size() + 1) {
+                    System.out.println("Can't insert at this position.");
+                } else {
+                    ll.insertAt(Integer.parseInt(tokens[1]),
+                                Integer.parseInt(tokens[2]));
+                    System.out.println(ll.displayAll());
+                }
+                break;
+            case "reverse":
+                if (!ll.isEmpty()) {
+                    ll.reverse();
+                    System.out.println(ll.displayAll());
+                } else {
+                    System.out.println("No elements to reverse.");
+                }
+                break;
+            default:
+                break;
+            }
+        }
     }
 }
+
 class LinkedList {
-    Node head;
-    Node tail;
-    int size;
-    int count;
-    // Node temp;
-
-    // int top;
+    private Node head;
+    private Node tail;
+    private int size = 0;
+    private static int index = 0;
+    private class Node {
+        private int value;
+        private Node next;
+    }
 
     LinkedList() {
         head = null;
         tail = null;
-        size = 0;
-        count = 0;
-        // temp = head.link;
-
-        // top = -1;
     }
 
-    void insertAt(int pos, int data) {
-        insertAtpos(head, pos, data);
-
-    }
-    void insertAtpos(Node head1, int pos, int data) {
-        if (pos == 0) {
-            insertFront(count);
-            return;
+    public void deleteFront() {
+        if (head != null) {
+            head = head.next;
+            size--;
         }
-        if (count + 1 == pos) {
-            Node new_node = new Node(data);
-            // Node temp = head;
-            new_node.link = head1.link;
-            head1.link = new_node;
-            count = 0;
-            return;
-        }
-        count++;
-        insertAtpos(head1.link, pos, data);
-
     }
-    void insertFront(final int value) {
-        if (head == null) {
-            Node head = new Node(value);
-            // head.value = valuvaluee;
-            head.link = null;
-            tail = head;
+
+    public void deleteBack() {
+        if (tail != null) {
+            Node temp = null;
+            Node popped = tail;
+            Node element = head;
+            while (element != tail) {
+                temp = element;
+                element = element.next;
+            }
+            tail = temp;
+            tail.next = null;
+            // popped.next = null;
+            size--;
+            // return item;
+        }
+    }
+
+    public void insertBack(final int value) {
+        if (tail == null) {
+            tail = new Node();
+            tail.value = value;
+            tail.next = null;
+            head = tail;
         } else {
-            Node temp = new Node(value);
-            // temp.value = value;
-            temp.link = head;
-            head = temp;
+            Node oldTail = tail;
+            tail = new Node();
+            tail.value = value;
+            tail.next = null;
+            oldTail.next = tail;
         }
         size++;
     }
 
-    void printList() {
-        Node node;
-        node = head;
-        while (node != null) {
-            System.out.print(node.value + " ");
-            node = node.link;
+    public void insertFront(final int value) {
+        if (head == null) {
+            head = new Node();
+            head.value = value;
+            head.next = null;
+            tail = head;
+        } else {
+            Node oldHead = head;
+            head = new Node();
+            head.value = value;
+            head.next = oldHead;
         }
-        System.out.println();
+        size++;
     }
-    void printList1(Node node) {
-        // Node node;
-        // node = head;
-        while (node != null) {
-            System.out.print(node.value + " ");
-            node = node.link;
+    public void insertAt(int pos, int value) {
+        insertAt(head, pos, value);
+    }
+    public void insertAt(Node head, int pos, int value) {
+        if (pos == 0) {
+            insertFront(value);
+            return;
         }
-        System.out.println();
+        if (index + 1 == pos) {
+            Node new_node = new Node();
+            // Node temp = head;
+            new_node.value = value;
+            new_node.next = head.next;
+            head.next = new_node;
+            index = 0;
+            return;
+        }
+        index++;
+        insertAt(head.next, pos, value);
     }
-    Node reverse() {
-        Node node;
-        node = head;
-        try {
-            if (node.link == null) {
-                throw new NoElementException();
-            } else {
-                //reverse the elements here
-                Node prev = null;
-                Node current = node;
-                Node next = null;
-                while (current != null) {
-                    next = current.link;
-                    current.link = prev;
-                    prev = current;
-                    current = next;
-                }
-                node = prev;
-                System.out.println("aaa");
-                System.out.println(node.value);
-                printList1(node);
-
-                return node;
+    public boolean isEmpty() {
+        return head == null;
+    }
+    public void reverse() {
+        head = reverseRecursive(head);
+    }
+    private Node reverseRecursive(Node head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        Node temp = reverseRecursive(head.next);
+        head.next.next = head;
+        head.next = null;
+        return temp;
+    }
+    public int size() {
+        return size;
+    }
+    public String displayAll() {
+        if (size != 0) {
+            String str = "";
+            Node temp = head;
+            while (temp != null) {
+                str += temp.value + ", ";
+                temp = temp.next;
             }
-        } catch (Exception e) {
-            // System.out.println(e.getMessage());
-            System.out.println("No elements to reverse.");
-            return node;
+            return str.substring(0, str.length() - 2);
         }
-
-
-    }
-
-}
-class Solution {
-    Solution() {
-
-    }
-    public static void main(String[] args) {
-        LinkedList li = new LinkedList();
-        Scanner sc = new Scanner(System.in);
-        while (sc.hasNext()) {
-            // li.head = new Node(85);
-            // li.head.link = new Node(15);
-            // li.head.link.link = new Node(4);
-            // li.head.link.link.link = new Node(20);
-            String[] line = sc.nextLine().split(" ");
-            switch (line[0]) {
-            case "insertAt":
-                if (Integer.parseInt(line[1]) < 0 || Integer.parseInt(
-                            line[1]) > li.size + 1) {
-                    System.out.println("Can't insert at this position.");
-                } else {
-                    li.insertAt(Integer.parseInt( line[1]), Integer.parseInt( line[2]));
-                    li.printList();
-                    //     System.out.println();
-                }
-                break;
-            case "reverse":
-                li.reverse();
-                break;
-
-            }
-        }
+        return "";
     }
 }
