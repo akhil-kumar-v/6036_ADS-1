@@ -15,6 +15,8 @@ class Sorting {
      * @param      low   The low
      * @param      high  The high
      */
+    // Complexity = N^2
+
     public void insertion(final Comparable[] arr, final int low,
                           final int high) {
         for (int i = low; i <= high; i++) {
@@ -30,6 +32,8 @@ class Sorting {
      * @param      j     { parameter_description }
      * @param      min   The minimum
      */
+    // Complexity = 1
+
     public void swap(final Comparable[] arr, final int j, final int min) {
         Comparable temp = arr[j];
         arr[j] = arr[min];
@@ -59,6 +63,8 @@ class Sorting {
      * @param      high    The high
      * @param      cutOff  The cut off
      */
+    // Complexity = Log N
+
     public void sort(final Comparable[] arr, final int low,
                      final int high, final int cutOff) {
         if (high <= low + cutOff - 1) {
@@ -89,6 +95,8 @@ class Sorting {
      *
      * @return     { description_of_the_return_value }
      */
+    // Complexity = N
+
     public int partition(final Comparable[] arr,
                          final int low, final int high) {
         int i = low;
@@ -120,6 +128,8 @@ class Sorting {
      *
      * @return     { description_of_the_return_value }
      */
+    // Complexity = 1
+
     public boolean less(final Comparable a, final Comparable b) {
         return a.compareTo(b) < 0;
     }
@@ -138,6 +148,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
+    // Complexity = N
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         Sorting sort = new Sorting();
