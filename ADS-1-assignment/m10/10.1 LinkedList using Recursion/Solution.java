@@ -51,9 +51,9 @@ public final class Solution {
  * List of linkeds.
  */
 class LinkedList {
-/**
- * Node head.
- */
+    /**
+     * Node head.
+     */
     private Node head;
     /**
      * Node tail.
@@ -160,7 +160,7 @@ class LinkedList {
      * @param      pos    The position
      * @param      value  The value
      */
-    public void insertAt(final int pos,final int value) {
+    public void insertAt(final int pos, final int value) {
         insertAt(head, pos, value);
     }
     /**
@@ -170,7 +170,7 @@ class LinkedList {
      * @param      pos    The position
      * @param      value  The value
      */
-    public void insertAt(final Node head1,final int pos,final int value) {
+    public void insertAt(final Node head1, final int pos, final int value) {
         if (pos == 0) {
             insertFront(value);
             return;
