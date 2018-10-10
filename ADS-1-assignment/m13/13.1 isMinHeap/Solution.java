@@ -56,6 +56,12 @@ class PriorityQueue<E extends Comparable<E>> {
  */
 class Solution {
     /**
+     * Constructs the object.
+     */
+    Solution() {
+
+    }
+    /**
      * Main Function
      *
      * @param      args  The arguments
