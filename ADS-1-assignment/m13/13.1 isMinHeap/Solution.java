@@ -12,7 +12,7 @@ class PriorityQueue<E extends Comparable<E>> {
     /**
      * Int size.
      */
-    int size;
+    private int size;
     /**
      * Constructs the object.
      *
