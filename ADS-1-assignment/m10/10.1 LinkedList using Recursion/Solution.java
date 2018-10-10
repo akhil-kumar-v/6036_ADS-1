@@ -40,7 +40,7 @@ class LinkedList {
     Node tail;
     int size;
     int count;
-    Node temp;
+    // Node temp;
 
     // int top;
 
@@ -54,59 +54,41 @@ class LinkedList {
         // top = -1;
     }
     void insertAt(int pos, int data) {
-        try {
-            if (pos < size && pos >= 0) {
-                Node ptr = new Node(data);
-                if (pos == 0) {
-                    size++;
-                    if (head == null) {
-                        head = ptr;
-                        tail = head;
-                    }
-                } else {
-                    count = 0;
-                    insertAtpos(count, pos, data);
-                }
-            } else {
-                throw new InvalidPositionException();
-            }
-        } catch (Exception e) {
-            // System.out.println(e.getMessage());
-            System.out.println("Can't insert at this position.");
-        }
+        insertAtpos(head, pos, data);
 
     }
-    void insertAtpos(int count, int pos, int data) {
-        if (count == pos) {
-            Node ptr = new Node(data);
+    void insertAtpos(Node head, int pos, int data) {
+        if (pos == 0) {
+            insertFront(count);
+            return;
+        }
+        if (count + 1 == pos) {
+            Node new_node = new Node(data);
+            // Node temp = head;
+            new_node.link = head.link;
+            head.link = new_node;
+            count = 0;
+            return;
+        }
+        count++;
+        insertAtpos(head.link, pos, data);
 
-
+    }
+    void insertFront(final int value) {
+        if (head == null) {
+            Node head = new Node(value);
+            // head.value = valuvaluee;
+            head.link = null;
+            tail = head;
         } else {
-            temp = temp.link;
-            insertAtpos(++count, pos, data);
+            Node temp = new Node(value);
+            // temp.value = value;
+            temp.link = head;
+            head = temp;
         }
-
-
+        size++;
     }
 
-
-    // void reverse() {
-    //     try {
-    //         if (size == 0) {
-    //             throw new NoElementException();
-    //         } else {
-    //             //reverse the elements here
-
-    //         }
-    //     } catch (Exception e) {
-    //         // System.out.println(e.getMessage());
-    //         System.out.println("No elements to reverse.");
-    //     }
-    // }
-    // void reverse1() {
-    //     reverse(head);
-    //     printList();
-    // }
     void printList() {
         Node node;
         node = head;
