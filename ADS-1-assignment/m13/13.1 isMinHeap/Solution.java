@@ -58,7 +58,7 @@ final class Solution {
     /**
      * Constructs the object.
      */
-    public Solution() {
+    Solution() {
 
     }
     /**
