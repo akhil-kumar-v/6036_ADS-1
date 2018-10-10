@@ -1,8 +1,20 @@
 import java.util.Scanner;
+/**
+ * Class for sorting.
+ */
 class Sorting {
-
+    /**
+     * Constructs the object.
+     */
     Sorting() {
     }
+    /**
+     * Method for insertion
+     *
+     * @param      arr   The arr
+     * @param      low   The low
+     * @param      high  The high
+     */
     public void insertion(final Comparable[] arr, final int low,
                           final int high) {
         for (int i = low; i <= high; i++) {
@@ -11,11 +23,25 @@ class Sorting {
             }
         }
     }
+    /**
+     * Swapping items
+     *
+     * @param      arr   The arr
+     * @param      j     { parameter_description }
+     * @param      min   The minimum
+     */
     public void swap(final Comparable[] arr, final int j, final int min) {
         Comparable temp = arr[j];
         arr[j] = arr[min];
         arr[min] = temp;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @param      arr   The arr
+     *
+     * @return     String representation of the object.
+     */
     public String toString(final Comparable[] arr) {
         // System.out.println("in print");
         String str = "[";
@@ -25,6 +51,14 @@ class Sorting {
         str += arr[arr.length - 1] + "]";
         return str;
     }
+    /**
+     * Sort Function
+     *
+     * @param      arr     The arr
+     * @param      low     The low
+     * @param      high    The high
+     * @param      cutOff  The cut off
+     */
     public void sort(final Comparable[] arr, final int low,
                      final int high, final int cutOff) {
         if (high <= low + cutOff - 1) {
@@ -37,9 +71,24 @@ class Sorting {
         sort(arr, low, k - 1, cutOff);
         sort(arr, k + 1, high, cutOff);
     }
+    /**
+     * Sort Over Riding.
+     *
+     * @param      array   The array
+     * @param      cutOff  The cut off
+     */
     public void sort(final Comparable[] array, final int cutOff) {
         sort(array, 0, array.length - 1, cutOff);
     }
+    /**
+     * Partition the Array
+     *
+     * @param      arr   The arr
+     * @param      low   The low
+     * @param      high  The high
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int partition(final Comparable[] arr,
                          final int low, final int high) {
         int i = low;
@@ -63,14 +112,32 @@ class Sorting {
         swap(arr, low, j);
         return j;
     }
+    /**
+     * Comparable.
+     *
+     * @param      a     { parameter_description }
+     * @param      b     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean less(final Comparable a, final Comparable b) {
         return a.compareTo(b) < 0;
     }
 }
-
+/**
+ * Solution Class.
+ */
 public final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
     }
+    /**
+     * Main Function
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         Sorting sort = new Sorting();
