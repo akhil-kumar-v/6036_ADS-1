@@ -208,13 +208,13 @@ class LinkedList {
      *
      * @return     { description_of_the_return_value }
      */
-    private Node reverseRecursive(Node head) {
-        if (head == null || head.next == null) {
-            return head;
+    private Node reverseRecursive(final Node head1) {
+        if (head1 == null || head1.next == null) {
+            return head1;
         }
-        Node temp = reverseRecursive(head.next);
-        head.next.next = head;
-        head.next = null;
+        Node temp = reverseRecursive(head1.next);
+        head1.next.next = head;
+        head1.next = null;
         return temp;
     }
     /**
