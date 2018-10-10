@@ -1,14 +1,8 @@
 Starting audit...
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:2: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:8: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:12: First sentence should end with a period. [JavadocStyle]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:15:9: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:21:19: Parameter array should be final. [FinalParameters]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:25: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:41: First sentence should end with a period. [JavadocStyle]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:49:25: Parameter a should be final. [FinalParameters]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:49:32: Parameter b should be final. [FinalParameters]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:57:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:64: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 11 errors.
+Checkstyle ends with 5 errors.

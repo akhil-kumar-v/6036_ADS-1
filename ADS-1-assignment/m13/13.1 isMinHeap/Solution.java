@@ -1,16 +1,16 @@
 import java.util.Scanner;
 /**
- * List of priorities
+ * List of priorities.
  *
  * @param      <E>   { parameter_description }
  */
 class PriorityQueue<E extends Comparable<E>> {
     /**
-     * Array
+     * Array.
      */
     private E[] arr;
     /**
-     * Int size
+     * Int size.
      */
     int size;
     /**
@@ -23,7 +23,7 @@ class PriorityQueue<E extends Comparable<E>> {
         size = 0;
     }
     /**
-     * Determines if minimum heap
+     * Determines if minimum heap.
      *
      * @return     True if minimum heap, False otherwise.
      */
@@ -39,7 +39,7 @@ class PriorityQueue<E extends Comparable<E>> {
         return true;
     }
     /**
-     * Returns boolean on comparing 2 items
+     * Returns boolean on comparing 2 items.
      *
      * @param      a     { parameter_description }
      * @param      b     { parameter_description }
@@ -62,7 +62,7 @@ public class Solution {
 
     }
     /**
-     * Main Function
+     * Main Function.
      *
      * @param      args  The arguments
      */
