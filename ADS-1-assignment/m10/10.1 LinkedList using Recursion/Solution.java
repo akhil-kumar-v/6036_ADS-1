@@ -169,9 +169,6 @@ class Solution {
             case "reverse":
                 li.reverse();
                 break;
-            case "p":
-                li.printList();
-                break;
 
             }
         }
