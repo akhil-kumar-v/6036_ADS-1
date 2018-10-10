@@ -55,12 +55,7 @@ class PriorityQueue<E extends Comparable<E>> {
  * Class for solution.
  */
 final class Solution {
-    /**
-     * Constructs the object.
-     */
-    Solution() {
 
-    }
     /**
      * Main Function.
      *
