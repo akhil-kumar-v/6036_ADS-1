@@ -58,7 +58,7 @@ class LinkedList {
         insertAtpos(head, pos, data);
 
     }
-    void insertAtpos(Node head, int pos, int data) {
+    void insertAtpos(Node head1, int pos, int data) {
         if (pos == 0) {
             insertFront(count);
             return;
@@ -66,13 +66,13 @@ class LinkedList {
         if (count + 1 == pos) {
             Node new_node = new Node(data);
             // Node temp = head;
-            new_node.link = head.link;
-            head.link = new_node;
+            new_node.link = head1.link;
+            head1.link = new_node;
             count = 0;
             return;
         }
         count++;
-        insertAtpos(head.link, pos, data);
+        insertAtpos(head1.link, pos, data);
 
     }
     void insertFront(final int value) {

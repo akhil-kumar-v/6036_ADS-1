@@ -30,10 +30,9 @@ Starting audit...
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:57:19: Parameter pos should be final. [FinalParameters]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:57:28: Parameter data should be final. [FinalParameters]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:61:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:61:22: Parameter head should be final. [FinalParameters]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:61:27: 'head' hides a field. [HiddenField]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:61:33: Parameter pos should be final. [FinalParameters]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:61:42: Parameter data should be final. [FinalParameters]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:61:22: Parameter head1 should be final. [FinalParameters]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:61:34: Parameter pos should be final. [FinalParameters]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:61:43: Parameter data should be final. [FinalParameters]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:67:18: Name 'new_node' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:78:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:80:18: 'head' hides a field. [HiddenField]
@@ -51,4 +50,4 @@ Starting audit...
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:164:50: '(' is followed by whitespace. [ParenPad]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:164:78: '(' is followed by whitespace. [ParenPad]
 Audit done.
-Checkstyle ends with 51 errors.
+Checkstyle ends with 50 errors.
