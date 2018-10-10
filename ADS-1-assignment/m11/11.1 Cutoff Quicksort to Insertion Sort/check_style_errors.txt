@@ -1,0 +1,15 @@
+Starting audit...
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:4:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:6:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:14:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:19:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:28:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:40:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:43:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:66:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:71: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:72:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m11\11.1 Cutoff Quicksort to Insertion Sort\Solution.java:74:5: Missing a Javadoc comment. [JavadocMethod]
+Audit done.
+Checkstyle ends with 12 errors.
