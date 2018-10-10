@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:207:8: Unused @param tag for 'head'. [JavadocMethod]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m10\10.1 LinkedList using Recursion\Solution.java:211:46: Expected @param tag for 'head1'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 2 errors.

@@ -204,7 +204,7 @@ class LinkedList {
     /**
      * Helper for Reverse.
      *
-     * @param      head  The head
+     * @param      head1  The head
      *
      * @return     { description_of_the_return_value }
      */
