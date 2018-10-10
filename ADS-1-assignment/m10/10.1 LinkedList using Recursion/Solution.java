@@ -166,7 +166,7 @@ class LinkedList {
     /**
      * Insert Function Overridding.
      *
-     * @param      head   The head
+     * @param      head1   The head
      * @param      pos    The position
      * @param      value  The value
      */
@@ -176,11 +176,11 @@ class LinkedList {
             return;
         }
         if (index + 1 == pos) {
-            Node new_node = new Node();
+            Node newNode = new Node();
             // Node temp = head1;
-            new_node.value = value;
-            new_node.next = head1.next;
-            head1.next = new_node;
+            newNode.value = value;
+            newNode.next = head1.next;
+            head1.next = newNode;
             index = 0;
             return;
         }
