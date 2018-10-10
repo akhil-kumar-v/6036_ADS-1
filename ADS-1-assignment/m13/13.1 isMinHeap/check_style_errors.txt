@@ -11,6 +11,5 @@ Starting audit...
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:57:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:58: First sentence should end with a period. [JavadocStyle]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:63:29: Parameter args should be final. [FinalParameters]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:68: switch without "default" clause. [MissingSwitchDefault]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 12 errors.
