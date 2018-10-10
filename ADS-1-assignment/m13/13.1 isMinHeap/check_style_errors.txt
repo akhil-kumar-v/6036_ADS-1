@@ -1,4 +1,5 @@
 Starting audit...
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:57:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m13\13.1 isMinHeap\Solution.java:61:5: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 2 errors.
