@@ -1,12 +1,32 @@
 import java.util.Scanner;
-import java.util.Arrays;
+/**
+ * List of priorities
+ *
+ * @param      <E>   { parameter_description }
+ */
 class PriorityQueue<E extends Comparable<E>> {
+    /**
+     * Array
+     */
     private E[] arr;
+    /**
+     * Int size
+     */
     int size;
+    /**
+     * Constructs the object.
+     *
+     * @param      array  The array
+     */
     PriorityQueue(E[] array) {
         this.arr = array;
         size = 0;
     }
+    /**
+     * Determines if minimum heap
+     *
+     * @return     True if minimum heap, False otherwise.
+     */
     public boolean isMinHeap() {
         for (int i = 1; i < arr.length; i++) {
             if (2 * i < arr.length && less(2 * i, i)) {
@@ -18,13 +38,28 @@ class PriorityQueue<E extends Comparable<E>> {
         }
         return true;
     }
+    /**
+     * Returns boolean on comparing 2 items
+     *
+     * @param      a     { parameter_description }
+     * @param      b     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean less(int a, int b) {
         return arr[a].compareTo(arr[b]) < 0;
     }
 }
 
-
+/**
+ * Class for solution.
+ */
 class Solution {
+    /**
+     * Main Function
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String dataType = sc.nextLine();
