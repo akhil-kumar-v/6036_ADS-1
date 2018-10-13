@@ -300,12 +300,14 @@ class Solution {
                 }
                 break;
             case "intersection":
+                                            // System.out.println("asa");
+
                 ArrayList<String> l1 = bstlw.keys();
                 ArrayList<String> l2 = bsthg.keys();
 
                 for ( i = 0; i < l1.size(); i++) {
                     for (int j = 0; j < l2.size(); j++) {
-                        if (l1.get(i) == (l2.get(j))) {
+                        if (l1.get(i).equals((l2.get(j)))) {
                                 // System.out.println("asa");
                             System.out.println( l1.get(i) );
                             // System.out.println("l2" + l2.get(i));
