@@ -136,13 +136,13 @@ class Solution {
                 // }
 
                 for (int k = 1; k < 6; k++) {
-                    if (bsthg.get(sa.stk[k - 1].getName()) == null) {
+                    if ( ( bsthg.get(sa.stk[k - 1].getName()) ) == null) {
                         bsthg.put(sa.stk[k - 1].getName(), 1);
                     } else {
                         int count = bsthg.get(sa.stk[k - 1].getName());
                         bsthg.put(sa.stk[k - 1].getName(), (count + 1));
                     }
-                    System.out.println(sa.stk[k - 1].getName() + " " + maxpq.getMaxi(k));
+                    System.out.println(sa.stk[k - 1].getName() + " " + sa.stk[k - 1].getStock());
                 }
                 System.out.println();
                 int b = t1 - 1;
@@ -156,7 +156,8 @@ class Solution {
                     }
                     // System.out.println(sa.stk[b].getName() + " " + minpq.getMini(k)
                     //                    + "here =" + sa.stk[b--].getStock());
-                    System.out.println(sa.stk[b].getName() + " " + sa.stk[b--].getStock());
+                    System.out.println(sa.stk[b].getName() + " " + sa.stk[b].getStock());
+                    b--;
                 }
 
                 // System.out.println();
@@ -213,7 +214,6 @@ class Solution {
                 int b = t1 - 1;
                 for (int k = 1; k < 6; k++) {
                     if (bstlw.get(sa.stk[b].getName()) == null) {
-                        // System.out.println(bstlw.get(sa.stk[b].getName()) == null);
                         bstlw.put(sa.stk[b].getName(), 1);
                     } else {
                         int count = bstlw.get(sa.stk[b].getName());
@@ -282,12 +282,15 @@ class Solution {
             case "get":
                 if (line[1].equals("minST")) {
                     if (bstlw.get(line[2]) == null) {
+                        // System.out.print(line[2] + " = ");
                         System.out.println(0);
                     } else {
                         System.out.println(bstlw.get(line[2]));
                     }
                 } else {
-                    if (bstlw.get(line[2]) == null) {
+                    if (bsthg.get(line[2]) == null) {
+                        // System.out.print(line[2] + " = ");
+
                         System.out.println(0);
                     } else {
                         System.out.println(bsthg.get(line[2]));
@@ -301,49 +304,5 @@ class Solution {
         }
     }
 
-    // public static void main(final String[] args) {
-    //     Scanner sc = new Scanner(System.in);
-    //     BinarysearchST<String, Integer> bst = new
-    //     BinarysearchST<String, Integer>();
-    //     String[] input = sc.nextLine().split(" ");
-    //     bst = new BinarysearchST<String, Integer>(input.length);
-    //     for (int i = 0; i < input.length; i++) {
-    //         bst.put(input[i], i);
-    //     }
-    //     while (sc.hasNextLine()) {
-    //         String[] tokens = sc.nextLine().split(" ");
-    //         switch (tokens[0]) {
-    //         case "contains":
-    //             System.out.println(bst.contains(tokens[1]));
-    //             break;
-    //         case "get":
-    //             System.out.println(bst.get(tokens[1]));
-    //             break;
-    //         case "max":
-    //             System.out.println(bst.max());
-    //             break;
-    //         case "min":
-    //             System.out.println(bst.min());
-    //             break;
-    //         case "floor":
-    //             System.out.println(bst.floor(tokens[1]));
-    //             break;
-    //         case "rank":
-    //             System.out.println(bst.rank(tokens[1]));
-    //             break;
-    //         case "deleteMin":
-    //             bst.deleteMin();
-    //             break;
-    //         case "keys":
-    //             ArrayList<String> limit = bst.keys();
-    //             for (int i = 0; i < limit.size(); i++) {
-    //                 System.out.println(limit.get(i) + " "
-    //                                    + bst.get(limit.get(i)));
-    //             }
-    //             break;
-    //         default:
-    //             break;
-    //         }
-    //     }
-    // }
+
 }
