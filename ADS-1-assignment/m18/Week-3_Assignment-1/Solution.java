@@ -96,7 +96,9 @@ class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
-        BinarysearchST<String, Integer> bst = new
+        BinarysearchST<String, Integer> bsthg = new
+        BinarysearchST<String, Integer>(2);
+        BinarysearchST<String, Integer> bstlw = new
         BinarysearchST<String, Integer>(2);
         int t1 = t;
         sc.nextLine();
@@ -104,8 +106,7 @@ class Solution {
             t = t1;
             if (i == 0) {
                 // Stocks st = new Stocks();
-                MinPQ<String> minpq = new MinPQ<String>();
-                MaxPQ<String> maxpq = new MaxPQ<String>();
+
                 StockArr sa = new StockArr();
 
                 while (t > 0) {
@@ -114,30 +115,47 @@ class Solution {
                     Stocks st = new Stocks(line[0], Double.parseDouble(line[1]));
                     // parsefoa
                     sa.addToList(st);
-                    minpq.insert(line[1]);
-                    maxpq.insert(line[1]);
+
                     // System.out.println(sa);
                 }
                 sa.selectionSort();
                 // System.out.println("---------------- \n" + sa + "\n-----------------");
+                MinPQ<String> minpq = new MinPQ<String>();
+                MaxPQ<String> maxpq = new MaxPQ<String>();
+                for (int j = 1; j < t1 + 1; j++) {
+                    minpq.insert("" + sa.stk[j - 1].getStock());
+                    maxpq.insert("" + sa.stk[j - 1].getStock());
+                }
 
-                for (int k = 0; k < 5; k++) {
-                    System.out.println(sa.stk[k].getName() + " "
-                                       + sa.stk[k].getStock());
 
-                    // System.out.println(maxpq.getMaxi(k));
+                // for (int k = 0; k < 5; k++) {
+                //     System.out.println(sa.stk[k].getName() + " "
+                //                        + sa.stk[k].getStock());
 
+
+                // }
+
+                for (int k = 1; k < 6; k++) {
+                    System.out.println(sa.stk[k - 1].getName() + " " + maxpq.getMaxi(k));
                 }
                 System.out.println();
-                int arrsize = sa.getsize();
-                // System.out.println("arrsize " + arrsize);
-                for (int k = arrsize - 1; k >= arrsize - 5; k--) {
-                    // System.out.println("k =" + k);
-                    System.out.println(sa.stk[k].getName() + " "
-                                       + sa.stk[k].getStock());
-
-                    // System.out.println(minpq.getMini(k));
+                int b = t1 - 1;
+                for (int k = 1; k < 6; k++) {
+                    // System.out.println(sa.stk[b].getName() + " " + minpq.getMini(k)
+                    //                    + "here =" + sa.stk[b--].getStock());
+                    System.out.println(sa.stk[b].getName() + " " + sa.stk[b--].getStock());
                 }
+
+                // System.out.println();
+                // int arrsize = sa.getsize();
+                // System.out.println("arrsize " + arrsize);
+                // for (int k = arrsize - 1; k >= arrsize - 5; k--) {
+                //     // System.out.println("k =" + k);
+                //     System.out.println(sa.stk[k].getName() + " "
+                //                        + sa.stk[k].getStock());
+
+                //     // System.out.println(minpq.getMini(k));
+                // }
                 System.out.println();
 
             } else {
@@ -158,24 +176,72 @@ class Solution {
                 }
                 sa.selectionSort();
                 // System.out.println("---------------- \n" + sa + "\n-----------------");
-
-                for (int k = 0; k < 5; k++) {
-                    System.out.println(sa.stk[k].getName() + " "
-                                       + sa.stk[k].getStock());
-
-                    // System.out.println(maxpq.getMaxi(k));
-
+                for (int j = 1; j < t1 + 1; j++) {
+                    minpq1.insert("" + sa.stk[j - 1].getStock());
+                    maxpq1.insert("" + sa.stk[j - 1].getStock());
                 }
+
+
+
+                for (int k = 1; k < 6; k++) {
+                    if (bsthg.get(sa.stk[k - 1].getName()) == null) {
+                        bsthg.put(sa.stk[k - 1].getName(), 1);
+                    } else {
+                        int count = bsthg.get(sa.stk[k - 1].getName());
+                        bsthg.put(sa.stk[k - 1].getName(), (count + 1));
+                    }
+
+
+                    // bstlw.put();
+                    System.out.println(sa.stk[k - 1].getName() + " " + sa.stk[k - 1].getStock());
+                }
+
                 System.out.println();
-                int arrsize = sa.getsize();
-                // System.out.println("arrsize " + arrsize);
-                for (int k = arrsize - 1; k >= arrsize - 5; k--) {
-                    // System.out.println("k =" + k);
-                    System.out.println(sa.stk[k].getName() + " "
-                                       + sa.stk[k].getStock());
-
-                    // System.out.println(minpq.getMini(k));
+                int b = t1 - 1;
+                for (int k = 1; k < 6; k++) {
+                    if (bstlw.get(sa.stk[b].getName()) == null) {
+                        // System.out.println(bstlw.get(sa.stk[b].getName()) == null);
+                        bstlw.put(sa.stk[b].getName(), 1);
+                    } else {
+                        int count = bstlw.get(sa.stk[b].getName());
+                        bstlw.put(sa.stk[b].getName(), (count + 1));
+                    }
+                    // System.out.println(sa.stk[b].getName() + " " + minpq.getMini(k)
+                    //                    + "here =" + sa.stk[b--].getStock());
+                    System.out.println(sa.stk[b].getName() + " " + sa.stk[b].getStock());
+                    b--;
                 }
+
+                // System.out.println();
+
+                /// old print >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+                // for (int k = 0; k < 5; k++) {
+                //     System.out.println(sa.stk[k].getName() + " "
+                //                        + sa.stk[k].getStock());
+
+                //     // System.out.println(maxpq.getMaxi(k));
+
+                // }
+                // System.out.println();
+                // int arrsize = sa.getsize();
+                // // System.out.println("arrsize " + arrsize);
+                // for (int k = arrsize - 1; k >= arrsize - 5; k--) {
+                //     // System.out.println("k =" + k);
+                //     System.out.println(sa.stk[k].getName() + " "
+                //                        + sa.stk[k].getStock());
+
+                //     // System.out.println(minpq.getMini(k));
+                // }
+
+
+
+                /// old print >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
 
                 // for (int k = 1; k < 6; k++) {
                 //     // System.out.println(sa.stk[i]);
@@ -199,6 +265,26 @@ class Solution {
         int query = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < query; i++) {
             String[] line = sc.nextLine().split(",");
+            switch (line[0]) {
+            case "get":
+                if (line[1].equals("minST")) {
+                    if (bstlw.get(line[2]) == null) {
+                        System.out.println(0);
+                    } else {
+                        System.out.println(bstlw.get(line[2]));
+                    }
+                } else {
+                    if (bstlw.get(line[2]) == null) {
+                        System.out.println(0);
+                    } else {
+                        System.out.println(bsthg.get(line[2]));
+
+                    }
+
+                }
+
+            }
+
         }
     }
 
