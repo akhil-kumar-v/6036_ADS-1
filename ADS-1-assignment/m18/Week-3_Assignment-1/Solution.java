@@ -136,11 +136,24 @@ class Solution {
                 // }
 
                 for (int k = 1; k < 6; k++) {
+                    if (bsthg.get(sa.stk[k - 1].getName()) == null) {
+                        bsthg.put(sa.stk[k - 1].getName(), 1);
+                    } else {
+                        int count = bsthg.get(sa.stk[k - 1].getName());
+                        bsthg.put(sa.stk[k - 1].getName(), (count + 1));
+                    }
                     System.out.println(sa.stk[k - 1].getName() + " " + maxpq.getMaxi(k));
                 }
                 System.out.println();
                 int b = t1 - 1;
                 for (int k = 1; k < 6; k++) {
+                    if (bstlw.get(sa.stk[b].getName()) == null) {
+                        // System.out.println(bstlw.get(sa.stk[b].getName()) == null);
+                        bstlw.put(sa.stk[b].getName(), 1);
+                    } else {
+                        int count = bstlw.get(sa.stk[b].getName());
+                        bstlw.put(sa.stk[b].getName(), (count + 1));
+                    }
                     // System.out.println(sa.stk[b].getName() + " " + minpq.getMini(k)
                     //                    + "here =" + sa.stk[b--].getStock());
                     System.out.println(sa.stk[b].getName() + " " + sa.stk[b--].getStock());

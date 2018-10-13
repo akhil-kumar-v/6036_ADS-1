@@ -442,11 +442,11 @@ Tasty Bite Eat 0.23
 WABCO India 0.33
 
 0
-1
+2
 1
 3
 ----------------------------------------
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 Larsen & Toubro 4.11
 Vinati Organics 4.03
@@ -599,7 +599,7 @@ Chola Inv Fin 1.47
 
 2
 0
-3
+4
 0
 ----------------------------------------
 ########## Testcase 4: Failed ##########
