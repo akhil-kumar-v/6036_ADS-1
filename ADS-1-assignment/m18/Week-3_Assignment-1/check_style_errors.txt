@@ -1,5 +1,4 @@
 Starting audit...
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:3:8: Unused import - java.util.ArrayList. [UnusedImports]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:5: Missing a Javadoc comment. [JavadocType]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:6:11: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:6:14: Variable 'stk' must be private and have accessor methods. [VisibilityModifier]
@@ -38,7 +37,7 @@ Starting audit...
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:63:26: Parameter c should be final. [FinalParameters]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:84: Class Solution should be declared as final. [FinalClass]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:84: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:96:5: Method length is 210 lines (max allowed is 150). [MethodLength]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:96:5: Method length is 226 lines (max allowed is 150). [MethodLength]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:96:29: Parameter args should be final. [FinalParameters]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:105:29: '6' is a magic number. [MagicNumber]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:115: Line is longer than 80 characters (found 81). [LineLength]
@@ -60,5 +59,8 @@ Starting audit...
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:222: Line is longer than 80 characters (found 86). [LineLength]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:224: Line is longer than 80 characters (found 89). [LineLength]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:281: switch without "default" clause. [MissingSwitchDefault]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:306:22: '(' is followed by whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:310:48: '(' is followed by whitespace. [ParenPad]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m18\Week-3_Assignment-1\Solution.java:310:58: ')' is preceded with whitespace. [ParenPad]
 Audit done.
-Checkstyle ends with 61 errors.
+Checkstyle ends with 63 errors.
