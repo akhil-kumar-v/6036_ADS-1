@@ -2,36 +2,92 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 
-
+/**
+ * Class for hash table.
+ */
 class HashTable {
+    /**
+     * Class for node.
+     */
     class Node {
+        /**
+         * String key.
+         */
         String key;
+        /**
+         * Integer data.
+         */
         Integer data;
+        /**
+         * Node link.
+         */
         Node next;
+        /**
+         * Constructs the object.
+         *
+         * @param      ky    { parameter_description }
+         * @param      da    { parameter_description }
+         * @param      ne    { parameter_description }
+         */
         Node(String ky, Integer da, Node ne) {
             this.key = ky;
             this.data = da;
             this.next = ne;
         }
+        /**
+         * Get key.
+         *
+         * @return     returns key.
+         */
         String getkey() {
             return this.key;
         }
+        /**
+         * Gets the data.
+         *
+         * @return     The data.
+         */
         Integer getData() {
             return this.data;
         }
+        /**
+         * Gets the next.
+         *
+         * @return     The next.
+         */
         Node getNext() {
             return this.next;
         }
+        /**
+         * Sets the data.
+         *
+         * @param      da    { parameter_description }
+         */
         void setData(Integer da) {
             this.data = da;
         }
     }
+    /**
+     * Arrays of type Node.
+     */
     Node[] st;
+    /**
+     * Size.
+     */
     final int size = 100;
+    /**
+     * Constructs the object.
+     */
     HashTable() {
         st = new Node[size];
     }
-
+    /**
+     * Has Function.
+     *
+     * @param      k     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     int hash(final String k) {
         final int con = 0x7fffffff;
         return (k.hashCode() & con) % size;
