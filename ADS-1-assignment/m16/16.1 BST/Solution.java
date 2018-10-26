@@ -62,10 +62,28 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      * Class for node.
      */
     class Node {
+        /**
+         * Key keyl.
+         */
         private Key key;
+        /**
+         * Values .
+         */
         private Values value;
+        /**
+         * Node right.
+         */
         private Node right;
+        /**
+         * Node left.
+         */
         private Node left;
+        /**
+         * Node.
+         *
+         * @param      key1  The key 1
+         * @param      val   The value
+         */
         Node(final Key key1, final Values val) {
             this.key = key1;
             this.value = val;
