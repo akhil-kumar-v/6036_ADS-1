@@ -1,7 +1,5 @@
 Starting audit...
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m17\TaxiCabNumbers\Solution.java:7: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m17\TaxiCabNumbers\Solution.java:327:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m17\TaxiCabNumbers\Solution.java:369: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m17\TaxiCabNumbers\Solution.java:371:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m17\TaxiCabNumbers\Solution.java:375: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m17\TaxiCabNumbers\Solution.java:377:5: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 2 errors.

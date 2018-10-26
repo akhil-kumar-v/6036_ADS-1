@@ -4,6 +4,9 @@ import java.util.NoSuchElementException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
+/**
+ * Class for cube sum.
+ */
 class CubeSum implements Comparable<CubeSum> {
     /**
      * Int sum.
@@ -324,6 +327,9 @@ class MinPQ<Key> implements Iterable<Key> {
      * Class for heap iterator.
      */
     private class HeapIterator implements Iterator<Key> {
+        /**
+         * Copy of MinPQ.
+         */
         private MinPQ<Key> copy;
         /**
          * Constructs the object.
