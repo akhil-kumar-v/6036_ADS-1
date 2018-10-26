@@ -371,9 +371,13 @@ class MinPQ<Key> implements Iterable<Key> {
         }
     }
 }
-
+/**
+ * Class sulution.
+ */
 final class Solution {
-
+    /**
+     * Constructs the object.
+     */
     private Solution() {
     }
     /**
