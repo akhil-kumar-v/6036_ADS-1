@@ -4,15 +4,15 @@ import java.util.Scanner;
  */
 class Book implements Comparable<Book> {
     /**
-     * { var_description }
+     * book name.
      */
     private String name;
     /**
-     * { var_description }
+     * string author name.
      */
     private String author;
     /**
-     * { var_description }
+     * var price.
      */
     private double price;
     /**
@@ -37,7 +37,7 @@ class Book implements Comparable<Book> {
         return this.name;
     }
     /**
-     * { function_description }
+     * Compareto funtion.
      *
      * @param      obj   The object
      *
@@ -55,7 +55,7 @@ class Book implements Comparable<Book> {
  */
 class BinarySearchT<Key extends Comparable<Key>, Values> {
     /**
-     * { var_description }
+     * Node .
      */
     private Node root;
     /**
@@ -73,7 +73,7 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
 
     }
     /**
-     * { function_description }
+     * put.
      *
      * @param      key    The key
      * @param      value  The value
@@ -85,7 +85,7 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         root = put(root, key, value);
     }
     /**
-     * { function_description }
+     * Puts helper function the value.
      *
      * @param      node   The node
      * @param      key    The key
@@ -108,12 +108,18 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         }
         return node;
     }
-
+    /**
+     * get .
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Values get(final Key key) {
         return get(root, key);
     }
     /**
-     * { function_description }
+     * gets node.
      *
      * @param      node  The node
      * @param      key   The key
@@ -135,7 +141,7 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
     }
 }
 /**
- * { item_description }
+ * class solution.
  */
 final class Solution {
     /**
@@ -145,7 +151,7 @@ final class Solution {
 
     }
     /**
-     * { function_description }
+     * main funtion.
      *
      * @param      args  The arguments
      */
