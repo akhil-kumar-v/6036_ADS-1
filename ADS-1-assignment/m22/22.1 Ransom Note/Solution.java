@@ -53,6 +53,7 @@ class HashTable {
         /**
          * Gets the next.
          *
+         *
          * @return     The next.
          */
         Node getNext() {
@@ -63,7 +64,7 @@ class HashTable {
          *
          * @param      da    { parameter_description }
          */
-        void setData(Integer da) {
+        void setData(final Integer da) {
             this.data = da;
         }
     }
@@ -118,6 +119,13 @@ class HashTable {
         }
         st[i] = new Node(k, v, st[i]);
     }
+    /**
+     * get values.
+     *
+     * @param      k     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean get(final String k) {
         int i = hash(k);
         for (Node x = st[i]; x != null; x = x.next) {
@@ -134,7 +142,9 @@ class HashTable {
 }
 
 
-
+/**
+ * Class for solution.
+ */
 class Solution {
     /**
      * Constructs the object.
