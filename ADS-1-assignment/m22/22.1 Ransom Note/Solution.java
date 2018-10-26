@@ -29,7 +29,7 @@ class HashTable {
          * @param      da    { parameter_description }
          * @param      ne    { parameter_description }
          */
-        Node(String ky, Integer da, Node ne) {
+        Node(final String ky, final Integer da, final Node ne) {
             this.key = ky;
             this.data = da;
             this.next = ne;
@@ -70,7 +70,7 @@ class HashTable {
     /**
      * Arrays of type Node.
      */
-    Node[] st;
+    private Node[] st;
     /**
      * Size.
      */
