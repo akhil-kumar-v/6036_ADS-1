@@ -1,32 +1,66 @@
 import java.util.Scanner;
-
+/**
+ * Class for book.
+ */
 class Book implements Comparable<Book> {
-
+    /**
+     * { var_description }
+     */
     private String name;
-
+    /**
+     * { var_description }
+     */
     private String author;
-
+    /**
+     * { var_description }
+     */
     private double price;
-
+    /**
+     * Constructs the object.
+     *
+     * @param      bookName    The book name
+     * @param      authorName  The author name
+     * @param      cost        The cost
+     */
     Book(final String bookName, final String authorName,
          final double cost) {
         this.name = bookName;
         this.author = authorName;
         this.price = cost;
     }
-
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {
         return this.name;
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      obj   The object
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int compareTo(final Book obj) {
         return this.getName().compareTo(obj.getName());
     }
 }
+/**
+ * Class for binary search t.
+ *
+ * @param      <Key>     The key
+ * @param      <Values>  The values
+ */
 class BinarySearchT<Key extends Comparable<Key>, Values> {
-
+    /**
+     * { var_description }
+     */
     private Node root;
-
+    /**
+     * Class for node.
+     */
     class Node {
         private Key key;
         private Values value;
@@ -38,12 +72,27 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         }
 
     }
+    /**
+     * { function_description }
+     *
+     * @param      key    The key
+     * @param      value  The value
+     */
     public void put(final Key key, final Values value) {
         if (key == null) {
             return;
         }
         root = put(root, key, value);
     }
+    /**
+     * { function_description }
+     *
+     * @param      node   The node
+     * @param      key    The key
+     * @param      value  The value
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Node put(final Node node, final Key key,
                     final Values value) {
         if (node == null) {
@@ -63,7 +112,14 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
     public Values get(final Key key) {
         return get(root, key);
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      node  The node
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     private Values get(final Node node, final Key key) {
         if (node == null) {
             return null;
@@ -78,12 +134,21 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         }
     }
 }
-
+/**
+ * { item_description }
+ */
 final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         BinarySearchT<Book, Integer> obj = new BinarySearchT<>();
