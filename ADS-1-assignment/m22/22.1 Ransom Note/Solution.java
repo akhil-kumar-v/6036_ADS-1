@@ -75,7 +75,7 @@ class HashTable {
     /**
      * Size.
      */
-    final int size = 100;
+    private final int size = 100;
     /**
      * Constructs the object.
      */
