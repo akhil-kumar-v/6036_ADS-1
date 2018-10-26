@@ -106,6 +106,7 @@ class HashTable {
     * @param      k     String.
     * @param      v     Count.
     */
+    // Complexity -  N
     public void put(final String k, final Integer v) {
         int i = hash(k);
         for (Node x = st[i]; x != null; x = x.next) {
@@ -126,6 +127,7 @@ class HashTable {
      *
      * @return     { description_of_the_return_value }
      */
+    // Complexity - N
     public boolean get(final String k) {
         int i = hash(k);
         for (Node x = st[i]; x != null; x = x.next) {
