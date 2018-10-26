@@ -13,15 +13,15 @@ class HashTable {
         /**
          * String key.
          */
-        String key;
+        private String key;
         /**
          * Integer data.
          */
-        Integer data;
+        private Integer data;
         /**
          * Node link.
          */
-        Node next;
+        private Node next;
         /**
          * Constructs the object.
          *
