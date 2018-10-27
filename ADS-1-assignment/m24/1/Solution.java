@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -26,7 +25,7 @@ class Student {
      * @param      ro    { parameter_description }
      * @param      ma    { parameter_description }
      */
-    Student(String na, int ro, double ma) {
+    Student(final String na, final int ro, final double ma) {
         /**
          * name.
          */
@@ -66,7 +65,7 @@ class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] arr = new int[n];
