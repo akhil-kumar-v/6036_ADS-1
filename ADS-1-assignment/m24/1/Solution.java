@@ -9,15 +9,15 @@ class Student {
     /**
      * Student Name.
      */
-    String name;
+    private String name;
     /**
      * Student Roll.
      */
-    int roll;
+    private int roll;
     /**
      * Student marks.
      */
-    double marks;
+    private double marks;
     /**
      * Constructs the object.
      *
@@ -38,6 +38,12 @@ class Student {
          * Marks.
          */
         this.marks = ma;
+    }
+    String getName() {
+        return this.name;
+    }
+    Double getMarks() {
+        return this.marks;
     }
     /**
      * Returns a string representation of the object.
@@ -93,7 +99,7 @@ class Solution {
                 // System.out.println("test");
                 Student temp = map.get(Integer.parseInt(line[1]));
                 try {
-                    System.out.println(temp.name);
+                    System.out.println(temp.getName());
 
                 } catch (Exception e) {
                     System.out.println("Student doesn't exists...");
@@ -101,7 +107,7 @@ class Solution {
             } else if (line[2].equals("2")) {
                 Student temp = map.get(Integer.parseInt(line[1]));
                 try {
-                    System.out.println(temp.marks);
+                    System.out.println(temp.getMarks());
 
                 } catch (Exception e) {
                     System.out.println("Student doesn't exists...");
