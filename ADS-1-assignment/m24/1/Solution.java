@@ -39,9 +39,19 @@ class Student {
          */
         this.marks = ma;
     }
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     String getName() {
         return this.name;
     }
+    /**
+     * Gets the marks.
+     *
+     * @return     The marks.
+     */
     Double getMarks() {
         return this.marks;
     }
@@ -81,7 +91,8 @@ class Solution {
         while (n > 0) {
             n--;
             String[] line = sc.nextLine().split(",");
-            Student st = new Student(line[1], Integer.parseInt(line[0]), Double.parseDouble(line[2]));
+            Student st = new Student(line[1], Integer.parseInt(line[0]),
+                                     Double.parseDouble(line[2]));
             // arr[i] = Integer.parseInt(line[0]);
             // i++;
             map.put(Integer.parseInt(line[0]), st);
