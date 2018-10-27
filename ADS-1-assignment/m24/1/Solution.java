@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -19,36 +18,8 @@ class Student {
         return this.name + " " + this.roll + " " +  this.marks;
     }
 
-
 }
 
-class StudentList {
-    Node root;
-    class Node {
-        Student stobj;
-        Node left;
-        Node right;
-
-    }
-
-    void addNode(int roll) {
-
-
-    }
-}
-
-// class StudentArr<E extends Comparable<E>> {
-//     private E[] arr1;
-//     int size;
-//     StudentArr(E[] array) {
-//         this.arr1 = array;
-//         size = 0;
-//     }
-//     void addarr(E val){
-//         arr1[size++]=val;
-//     }
-
-// }
 
 
 class Solution {
@@ -76,35 +47,14 @@ class Solution {
             arr[i] = Integer.parseInt(line[0]);
             i++;
             map.put(Integer.parseInt(line[0]), st);
-            // try {
-            //     stlist.add(st);
-            // } catch (Exception e) {
-            //     System.out.println(e.getMessage());
-            // }
         }
-        // Merge me = new Merge();
-        // me.sort(arr);
-        // System.out.println("BF =" + Arrays.toString(arr));
-
-
-        // System.out.println(ds.search(101));
-
         MergeSort ob = new MergeSort();
 
         ob.sort(arr, 0, arr.length - 1);
-
-
-        // System.out.println("AF =" + Arrays.toString(arr));
-
-
-
-
         int q = sc.nextInt();
         sc.nextLine();
         while (q > 0) {
             q--;
-            // System.out.println("test");
-
             String[] line = sc.nextLine().split(" ");
             // System.out.println(line[2]);
             if (line[2].equals("1")) {
