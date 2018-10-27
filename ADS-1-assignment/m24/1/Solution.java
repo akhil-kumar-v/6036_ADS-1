@@ -110,10 +110,20 @@ class Solution {
             if (line[2].equals("1")) {
                 // System.out.println("test");
                 Student temp = map.get(Integer.parseInt(line[1]));
-                System.out.println(temp.name);
+                try {
+                    System.out.println(temp.name);
+
+                } catch (Exception e) {
+                    System.out.println("Student doesn't exists...");
+                }
             } else if (line[2].equals("2")) {
                 Student temp = map.get(Integer.parseInt(line[1]));
-                System.out.println(temp.marks);
+                try {
+                    System.out.println(temp.marks);
+
+                } catch (Exception e) {
+                    System.out.println("Student doesn't exists...");
+                }
             }
         }
     }
