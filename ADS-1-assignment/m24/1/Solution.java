@@ -33,7 +33,7 @@ class Solution {
         // StudentArr sa = new StudentArr();
         // sa.arr1
         int[] arr = new int[n];
-        MyDS ds = new MyDS();
+        // MyDS ds = new MyDS();
         Map<Integer, Student> map = new HashMap<Integer, Student>();
 
         sc.nextLine();
@@ -42,7 +42,7 @@ class Solution {
             n--;
             String[] line = sc.nextLine().split(",");
             Student st = new Student(line[1], Integer.parseInt(line[0]), Double.parseDouble(line[2]));
-            ds.add(Integer.parseInt(line[0]));
+            // ds.add(Integer.parseInt(line[0]));
             // System.out.println(st);
             arr[i] = Integer.parseInt(line[0]);
             i++;
