@@ -1,4 +1,4 @@
 Starting audit...
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m24\1\Solution.java:73:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m24\1\Solution.java:73: Class Solution should be declared as final. [FinalClass]
 Audit done.
 Checkstyle ends with 1 errors.
