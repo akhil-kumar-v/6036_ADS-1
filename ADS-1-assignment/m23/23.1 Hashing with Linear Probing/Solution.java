@@ -191,7 +191,9 @@ class LinearProbingHashST<Key, Value> {
 
         n--;
 
-        if (n > 0 && n <= m / 8) resize(m / 2);
+        if (n > 0 && n <= m / 8) {
+            resize(m / 2);
+        }
 
         assert check();
     }
@@ -203,7 +205,9 @@ class LinearProbingHashST<Key, Value> {
     public Iterable<Key> keys() {
         Queue<Key> queue = new Queue<Key>();
         for (int i = 0; i < m; i++)
-            if (keys[i] != null) queue.enqueue(keys[i]);
+            if (keys[i] != null) {
+                queue.enqueue(keys[i]);
+            }
         return queue;
     }
 
@@ -221,8 +225,9 @@ class LinearProbingHashST<Key, Value> {
         }
 
         for (int i = 0; i < m; i++) {
-            if (keys[i] == null) continue;
-            else if (get(keys[i]) != vals[i]) {
+            if (keys[i] == null) {
+                continue;
+            } else if (get(keys[i]) != vals[i]) {
                 System.err.println("get[" + keys[i] + "] = "
                                    + get(keys[i])
                                    + "; vals[i] = " + vals[i]);
@@ -276,7 +281,13 @@ class Queue<Item> implements Iterable<Item> {
      * @param      <Item>  The item
      */
     private static class Node<Item> {
+        /**
+         * item.
+         */
         private Item item;
+        /**
+         * next.
+         */
         private Node<Item> next;
     }
     /**
@@ -309,7 +320,9 @@ class Queue<Item> implements Iterable<Item> {
      * @return     { description_of_the_return_value }
      */
     public Item peek() {
-        if (isEmpty()) throw new NoSuchElementException("Queue underflow");
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue underflow");
+        }
         return first.item;
     }
 
@@ -323,8 +336,11 @@ class Queue<Item> implements Iterable<Item> {
         last = new Node<Item>();
         last.item = item;
         last.next = null;
-        if (isEmpty()) first = last;
-        else           oldlast.next = last;
+        if (isEmpty()) {
+            first = last;
+        } else {
+            oldlast.next = last;
+        }
         n++;
     }
     /**
@@ -333,11 +349,15 @@ class Queue<Item> implements Iterable<Item> {
      * @return     { description_of_the_return_value }
      */
     public Item dequeue() {
-        if (isEmpty()) throw new NoSuchElementException("Queue underflow");
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue underflow");
+        }
         Item item = first.item;
         first = first.next;
         n--;
-        if (isEmpty()) last = null;   // to avoid loitering
+        if (isEmpty()) {
+            last = null;   // to avoid loitering
+        }
         return item;
     }
     /**
