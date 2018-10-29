@@ -1,7 +1,12 @@
 import java.util.Scanner;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
+/**
+ * Class for linear probing hash st.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
 class LinearProbingHashST<Key, Value> {
     private static final int INIT_CAPACITY = 4;
 
@@ -11,12 +16,18 @@ class LinearProbingHashST<Key, Value> {
     private Value[] vals;    // the values
 
 
-
+    /**
+     * Constructs the object.
+     */
     public LinearProbingHashST() {
         this(INIT_CAPACITY);
     }
 
-
+    /**
+     * Constructs the object.
+     *
+     * @param      capacity  The capacity
+     */
     public LinearProbingHashST(int capacity) {
         m = capacity;
         n = 0;
@@ -24,27 +35,51 @@ class LinearProbingHashST<Key, Value> {
         vals = (Value[]) new Object[m];
     }
 
-
+    /**
+     * size.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
         return n;
     }
 
-
+    /**
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
+     */
     public boolean isEmpty() {
         return size() == 0;
     }
 
-
+    /**
+     * key.
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(Key key) {
         if (key == null) throw new IllegalArgumentException("argument to contains() is null");
         return get(key) != null;
     }
-
+    /**
+     * hash.
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     private int hash(Key key) {
 
         return (11 * key.hashCode()) % m;
     }
-
+    /**
+     * capacity.
+     *
+     * @param      capacity  The capacity
+     */
     private void resize(int capacity) {
         LinearProbingHashST<Key, Value> temp = new LinearProbingHashST<Key, Value>(capacity);
         for (int i = 0; i < m; i++) {
@@ -57,7 +92,12 @@ class LinearProbingHashST<Key, Value> {
         m    = temp.m;
     }
 
-
+    /**
+     * put.
+     *
+     * @param      key   The key
+     * @param      val   The value
+     */
     public void put(Key key, Value val) {
         if (key == null) throw new IllegalArgumentException("first argument to put() is null");
 
@@ -79,7 +119,13 @@ class LinearProbingHashST<Key, Value> {
         vals[i] = val;
         n++;
     }
-
+    /**
+     * get.
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Value get(Key key) {
         if (key == null) throw new IllegalArgumentException("argument to get() is null");
         for (int i = hash(key); keys[i] != null; i = (i + 1) % m)
@@ -88,7 +134,11 @@ class LinearProbingHashST<Key, Value> {
         return null;
     }
 
-
+    /**
+     * delete.
+     *
+     * @param      key   The key
+     */
     public void delete(Key key) {
         if (key == null) throw new IllegalArgumentException("argument to delete() is null");
         if (!contains(key)) return;
@@ -118,7 +168,11 @@ class LinearProbingHashST<Key, Value> {
 
         assert check();
     }
-
+    /**
+     * keys.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Iterable<Key> keys() {
         Queue<Key> queue = new Queue<Key>();
         for (int i = 0; i < m; i++)
@@ -126,7 +180,11 @@ class LinearProbingHashST<Key, Value> {
         return queue;
     }
 
-
+    /**
+     * check.
+     *
+     * @return     { description_of_the_return_value }
+     */
     private boolean check() {
 
         if (m < 2 * n) {
@@ -143,7 +201,11 @@ class LinearProbingHashST<Key, Value> {
         }
         return true;
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String out = "{";
         if (this.size() != 0) {
@@ -160,37 +222,72 @@ class LinearProbingHashST<Key, Value> {
         }
     }
 }
-
+/**
+ * List of .
+ *
+ * @param      <Item>  The item
+ */
 class Queue<Item> implements Iterable<Item> {
+    /**
+     * FIRSR.
+     */
     private Node<Item> first;    // beginning of queue
+    /**
+     * last.
+     */
     private Node<Item> last;     // end of queue
+    /**
+     * n.
+     */
     private int n;               // number of elements on queue
-
+    /**
+     * Class for node.
+     *
+     * @param      <Item>  The item
+     */
     private static class Node<Item> {
         private Item item;
         private Node<Item> next;
     }
-
+    /**
+     * Constructs the object.
+     */
     public Queue() {
         first = null;
         last  = null;
         n = 0;
     }
-
+    /**
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
+     */
     public boolean isEmpty() {
         return first == null;
     }
-
+    /**
+     * size.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
         return n;
     }
-
+    /**
+     * peek.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Item peek() {
         if (isEmpty()) throw new NoSuchElementException("Queue underflow");
         return first.item;
     }
 
-
+    /**
+     * enqueue.
+     *
+     * @param      item  The item
+     */
     public void enqueue(Item item) {
         Node<Item> oldlast = last;
         last = new Node<Item>();
@@ -200,7 +297,11 @@ class Queue<Item> implements Iterable<Item> {
         else           oldlast.next = last;
         n++;
     }
-
+    /**
+     * dequeue.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Item dequeue() {
         if (isEmpty()) throw new NoSuchElementException("Queue underflow");
         Item item = first.item;
@@ -209,7 +310,11 @@ class Queue<Item> implements Iterable<Item> {
         if (isEmpty()) last = null;   // to avoid loitering
         return item;
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         StringBuilder s = new StringBuilder();
         for (Item item : this) {
@@ -218,23 +323,55 @@ class Queue<Item> implements Iterable<Item> {
         }
         return s.toString();
     }
-
+    /**
+     * iterator.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Iterator<Item> iterator()  {
         return new ListIterator<Item>(first);
     }
-
+    /**
+     * Class for list iterator.
+     *
+     * @param      <Item>  The item
+     */
     private class ListIterator<Item> implements Iterator<Item> {
+        /**
+         * current.
+         */
         private Node<Item> current;
-
+        /**
+         * Constructs the object.
+         *
+         * @param      first  The first
+         */
         public ListIterator(Node<Item> first) {
             current = first;
         }
-
-        public boolean hasNext()  { return current != null;                     }
-        public void remove()      { throw new UnsupportedOperationException();  }
-
+        /**
+         * Determines if it has next.
+         *
+         * @return     True if has next, False otherwise.
+         */
+        public boolean hasNext()  {
+            return current != null;
+        }
+        /**
+         * remove.
+         */
+        public void remove()      {
+            throw new UnsupportedOperationException();
+        }
+        /**
+         * next.
+         *
+         * @return     { description_of_the_return_value }
+         */
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             Item item = current.item;
             current = current.next;
             return item;
@@ -243,34 +380,44 @@ class Queue<Item> implements Iterable<Item> {
 }
 
 
-
+/**
+ * class solution.
+ */
 public final class Solution {
-  private Solution() {
-  }
-  public static void main(final String[] args) {
-    Scanner scan = new Scanner(System.in);
-    int n = Integer.parseInt(scan.nextLine());
-    LinearProbingHashST<String, Integer> probe =
-      new LinearProbingHashST<>();
-    for (int i = 0; i < n; i++) {
-      String[] tokens = scan.nextLine().split(" ");
-      switch (tokens[0]) {
-      case "put":
-        probe.put(tokens[1],
-                  Integer.parseInt(tokens[2]));
-        break;
-      case "get":
-        System.out.println(probe.get(tokens[1]));
-        break;
-      case "delete":
-        probe.delete(tokens[1]);
-        break;
-      case "display":
-        System.out.println(probe);
-        break;
-      default:
-        break;
-      }
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
     }
-  }
+    /**
+     * main.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = Integer.parseInt(scan.nextLine());
+        LinearProbingHashST<String, Integer> probe =
+            new LinearProbingHashST<>();
+        for (int i = 0; i < n; i++) {
+            String[] tokens = scan.nextLine().split(" ");
+            switch (tokens[0]) {
+            case "put":
+                probe.put(tokens[1],
+                          Integer.parseInt(tokens[2]));
+                break;
+            case "get":
+                System.out.println(probe.get(tokens[1]));
+                break;
+            case "delete":
+                probe.delete(tokens[1]);
+                break;
+            case "display":
+                System.out.println(probe);
+                break;
+            default:
+                break;
+            }
+        }
+    }
 }
