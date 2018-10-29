@@ -485,7 +485,11 @@ class BinarySearchTree {
     root = deleteMax(root);
   }
   /**
-   *  delete max.
+   * deelte max.
+   *
+   * @param      x     { parameter_description }
+   *
+   * @return     { description_of_the_return_value }
    */
   private Node deleteMax(final Node x) {
     if (x.right == null) {
