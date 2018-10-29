@@ -343,7 +343,8 @@ class BinarySearchTree {
       throw new IllegalArgumentException("argument to ceiling() is null");
     }
     if (isEmpty()) {
-      throw new NoSuchElementException("calls ceiling() with empty symbol table");
+      throw new NoSuchElementException
+      ("calls ceiling() with empty symbol table");
     }
     Node x = ceiling(root, key);
     if (x == null) {
@@ -385,7 +386,7 @@ class BinarySearchTree {
    *
    * @return     The book object.
    */
-  public Book select(int k) {
+  public Book select(final int k) {
     if (k < 0 || k >= size()) {
       throw new IllegalArgumentException("argument to select() is invalid: " + k);
     }
