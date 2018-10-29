@@ -97,7 +97,8 @@ class LinearProbingHashST<Key, Value> {
      * @param      capacity  The capacity
      */
     private void resize(final int capacity) {
-        LinearProbingHashST<Key, Value> temp = new LinearProbingHashST<Key, Value>(capacity);
+        LinearProbingHashST<Key, Value> temp
+            = new LinearProbingHashST<Key, Value>(capacity);
         for (int i = 0; i < m; i++) {
             if (keys[i] != null) {
                 temp.put(keys[i], vals[i]);
@@ -116,7 +117,8 @@ class LinearProbingHashST<Key, Value> {
      */
     public void put(final Key key, final Value val) {
         if (key == null) {
-            throw new IllegalArgumentException("first argument to put() is null");
+            throw new IllegalArgumentException("first "
+                                               + "argument to put() is null");
         }
 
         if (val == null) {
@@ -213,14 +215,17 @@ class LinearProbingHashST<Key, Value> {
     private boolean check() {
 
         if (m < 2 * n) {
-            System.err.println("Hash table size m = " + m + "; array size n = " + n);
+            System.err.println("Hash table size m = " + m
+                               + "; array size n = " + n);
             return false;
         }
 
         for (int i = 0; i < m; i++) {
             if (keys[i] == null) continue;
             else if (get(keys[i]) != vals[i]) {
-                System.err.println("get[" + keys[i] + "] = " + get(keys[i]) + "; vals[i] = " + vals[i]);
+                System.err.println("get[" + keys[i] + "] = "
+                                   + get(keys[i])
+                                   + "; vals[i] = " + vals[i]);
                 return false;
             }
         }
