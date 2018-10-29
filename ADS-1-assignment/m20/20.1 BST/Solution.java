@@ -343,8 +343,8 @@ class BinarySearchTree {
       throw new IllegalArgumentException("argument to ceiling() is null");
     }
     if (isEmpty()) {
-      throw new NoSuchElementException("calls ceiling() " +
-                                       "with empty symbol table");
+      throw new NoSuchElementException("calls ceiling() "
+                                       + "with empty symbol table");
     }
     Node x = ceiling(root, key);
     if (x == null) {
@@ -388,19 +388,19 @@ class BinarySearchTree {
    */
   public Book select(final int k) {
     if (k < 0 || k >= size()) {
-      throw new IllegalArgumentException("argument to " +
-                                         "select() is invalid: " + k);
+      throw new IllegalArgumentException("argument to "
+                                         + "select() is invalid: " + k);
     }
     Node x = select(root, k);
     return x.key;
   }
   /**
-   * Return key of rank k.
+   * rank k.
    *
-   * @param      x     The node.
-   * @param      k
+   * @param      x     { parameter_description }
+   * @param      k     { parameter_description }
    *
-   * @return     The node.
+   * @return     { description_of_the_return_value }
    */
   private Node select(final Node x, final int k) {
     if (x == null) {
@@ -411,9 +411,7 @@ class BinarySearchTree {
       return select(x.left,  k);
     } else if (t < k) {
       return select(x.right, k - t - 1);
-    }
-
-    else {
+    } else {
       return x;
     }
   }
