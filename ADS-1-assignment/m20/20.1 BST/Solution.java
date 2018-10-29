@@ -338,12 +338,19 @@ class BinarySearchTree {
    *
    * @return     The book object.
    */
-  public Book ceiling(Book key) {
-    if (key == null) throw new IllegalArgumentException("argument to ceiling() is null");
-    if (isEmpty()) throw new NoSuchElementException("calls ceiling() with empty symbol table");
+  public Book ceiling(final Book key) {
+    if (key == null) {
+      throw new IllegalArgumentException("argument to ceiling() is null");
+    }
+    if (isEmpty()) {
+      throw new NoSuchElementException("calls ceiling() with empty symbol table");
+    }
     Node x = ceiling(root, key);
-    if (x == null) return null;
-    else return x.key;
+    if (x == null) {
+      return null;
+    } else {
+      return x.key;
+    }
   }
   /**
    * ceiling.
@@ -353,14 +360,21 @@ class BinarySearchTree {
    *
    * @return     The node.
    */
-  private Node ceiling(Node x, Book key) {
-    if (x == null) return null;
+  private Node ceiling(final Node x, final Book key) {
+    if (x == null) {
+      return null;
+    }
     int cmp = key.compareTo(x.key);
-    if (cmp == 0) return x;
+    if (cmp == 0) {
+      return x;
+    }
     if (cmp < 0) {
       Node t = ceiling(x.left, key);
-      if (t != null) return t;
-      else return x;
+      if (t != null) {
+        return t;
+      } else {
+        return x;
+      }
     }
     return ceiling(x.right, key);
   }
