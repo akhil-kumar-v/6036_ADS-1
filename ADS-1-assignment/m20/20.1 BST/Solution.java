@@ -520,6 +520,7 @@ class BinarySearchTree {
    * @return     { description_of_the_return_value }
    */
   private Node delete(Node x, final Book key) {
+    Node temp=null;;
     if (x == null) {
       return null;
     }
@@ -536,12 +537,13 @@ class BinarySearchTree {
         return x.right;
       }
       Node t = x;
-      x = min(t.right);
-      x.right = deleteMin(t.right);
-      x.left = t.left;
+      temp = x;
+      temp = min(t.right);
+      temp.right = deleteMin(t.right);
+      temp.left = t.left;
     }
     x.size = size(x.left) + size(x.right) + 1;
-    return x;
+    return temp;
   }
 }
 /**
