@@ -8,13 +8,26 @@ import java.util.NoSuchElementException;
  * @param      <Value>  The value
  */
 class LinearProbingHashST<Key, Value> {
+    /**
+     * capacity.
+     */
     private static final int INIT_CAPACITY = 4;
-
+    /**
+     * N.
+     */
     private int n;           // number of key-value pairs in the symbol table
+    /**
+     * m.
+     */
     private int m;           // size of linear probing table
+    /**
+     * keys.
+     */
     private Key[] keys;      // the keys
+    /**
+     * vals.
+     */
     private Value[] vals;    // the values
-
 
     /**
      * Constructs the object.
@@ -28,7 +41,7 @@ class LinearProbingHashST<Key, Value> {
      *
      * @param      capacity  The capacity
      */
-    public LinearProbingHashST(int capacity) {
+    public LinearProbingHashST(final int capacity) {
         m = capacity;
         n = 0;
         keys = (Key[])   new Object[m];
@@ -60,7 +73,7 @@ class LinearProbingHashST<Key, Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(Key key) {
+    public boolean contains(final Key key) {
         if (key == null) {
             throw new IllegalArgumentException("argument to contains() is null");
         }
@@ -73,7 +86,7 @@ class LinearProbingHashST<Key, Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    private int hash(Key key) {
+    private int hash(final Key key) {
 
         return (11 * key.hashCode()) % m;
     }
@@ -82,7 +95,7 @@ class LinearProbingHashST<Key, Value> {
      *
      * @param      capacity  The capacity
      */
-    private void resize(int capacity) {
+    private void resize(final int capacity) {
         LinearProbingHashST<Key, Value> temp = new LinearProbingHashST<Key, Value>(capacity);
         for (int i = 0; i < m; i++) {
             if (keys[i] != null) {
@@ -100,7 +113,7 @@ class LinearProbingHashST<Key, Value> {
      * @param      key   The key
      * @param      val   The value
      */
-    public void put(Key key, Value val) {
+    public void put(final Key key, final Value val) {
         if (key == null) {
             throw new IllegalArgumentException("first argument to put() is null");
         }
@@ -130,7 +143,7 @@ class LinearProbingHashST<Key, Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    public Value get(Key key) {
+    public Value get(final Key key) {
         if (key == null) {
             throw new IllegalArgumentException("argument to get() is null");
         }
@@ -299,7 +312,7 @@ class Queue<Item> implements Iterable<Item> {
      *
      * @param      item  The item
      */
-    public void enqueue(Item item) {
+    public void enqueue(final Item item) {
         Node<Item> oldlast = last;
         last = new Node<Item>();
         last.item = item;
@@ -357,7 +370,7 @@ class Queue<Item> implements Iterable<Item> {
          *
          * @param      first  The first
          */
-        public ListIterator(Node<Item> first) {
+        public ListIterator(final Node<Item> first) {
             current = first;
         }
         /**
