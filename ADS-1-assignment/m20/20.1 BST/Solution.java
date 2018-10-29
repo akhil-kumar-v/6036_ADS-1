@@ -520,7 +520,7 @@ class BinarySearchTree {
    * @return     { description_of_the_return_value }
    */
   private Node delete(final Node x, final Book key) {
-    Node temp = x;;
+    Node temp = x;
     if (temp == null) {
       return null;
     }
