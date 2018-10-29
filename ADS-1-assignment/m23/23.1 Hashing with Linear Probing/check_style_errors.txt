@@ -1,6 +1,2 @@
 Starting audit...
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:35:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:44:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:302:5: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 3 errors.

@@ -32,7 +32,7 @@ class LinearProbingHashST<Key, Value> {
     /**
      * Constructs the object.
      */
-    public LinearProbingHashST() {
+    LinearProbingHashST() {
         this(INIT_CAPACITY);
     }
 
@@ -41,7 +41,7 @@ class LinearProbingHashST<Key, Value> {
      *
      * @param      capacity  The capacity
      */
-    public LinearProbingHashST(final int capacity) {
+    LinearProbingHashST(final int capacity) {
         m = capacity;
         n = 0;
         keys = (Key[])   new Object[m];
@@ -299,7 +299,7 @@ class Queue<Item> implements Iterable<Item> {
     /**
      * Constructs the object.
      */
-    public Queue() {
+    Queue() {
         first = null;
         last  = null;
         n = 0;
