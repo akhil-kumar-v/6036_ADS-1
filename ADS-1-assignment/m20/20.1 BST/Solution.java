@@ -113,15 +113,16 @@ class BinarySearchTree {
     /**
      * Constructs the object.
      *
-     * @param      k     key.
-     * @param      v     value.
+     * @param      k      { parameter_description }
+     * @param      v      { parameter_description }
+     * @param      sizeA  The size a
      */
-    Node(final Book k, final Integer v, final int size) {
+    Node(final Book k, final Integer v, final int sizeA) {
       this.key = k;
       this.value = v;
       this.left = null;
       this.right = null;
-      this.size = size;
+      this.size = sizeA;
     }
   }
   /**
@@ -157,9 +158,13 @@ class BinarySearchTree {
    *
    * @return     integer value.
    */
-  private int size(Node x) {
-    if (x == null) return 0;
-    else return x.size;
+  private int size(final Node x) {
+    if (x == null) {
+      return 0;
+    } else {
+      return x.size;
+
+    }
   }
   /**
    * put.
@@ -446,70 +451,70 @@ class BinarySearchTree {
  * solution.
  */
 final class Solution {
-    /**
-     * Constructs the object.
-     */
-    private Solution() {
-        //function.
+  /**
+   * Constructs the object.
+   */
+  private Solution() {
+    //function.
+  }
+  /**
+   * main function.
+   *
+   * @param      args  The arguments
+   */
+  public static void main(final String[] args) {
+    Scanner sc = new Scanner(System.in);
+    BinarySearchTree bst = new BinarySearchTree();
+    while (sc.hasNextLine()) {
+      String[] tokens = sc.nextLine().split(",");
+      switch (tokens[0]) {
+      case "put":
+        bst.put(new Book(tokens[1], tokens[2],
+                         Double.parseDouble(tokens[2 + 1])),
+                Integer.parseInt(tokens[2 + 2]));
+        break;
+      case "get":
+        System.out.println(bst.get(new Book(tokens[1],
+                                            tokens[2],
+                                            Double.parseDouble(
+                                              tokens[2 + 1]))));
+        break;
+      case "max":
+        System.out.println(bst.max());
+        break;
+      case "min":
+        System.out.println(bst.min());
+        break;
+      case "floor":
+        System.out.println(bst.floor(new Book(tokens[1],
+                                              tokens[2],
+                                              Double.parseDouble(
+                                                tokens[2 + 1]))));
+        break;
+      case "ceiling":
+        System.out.println(bst.ceiling(new Book(tokens[1],
+                                                tokens[2],
+                                                Double.parseDouble(
+                                                    tokens[
+                                                        2 + 1]))));
+        break;
+      case "select":
+        System.out.println(bst.select(Integer.parseInt(tokens[1])));
+        break;
+      case "deleteMax":
+        bst.deleteMax();
+        break;
+      case "deleteMin":
+        bst.deleteMin();
+        break;
+      case "delete":
+        bst.delete(new Book(tokens[1],
+                            tokens[2],
+                            Double.parseDouble(tokens[2 + 1])));
+        break;
+      default:
+        break;
+      }
     }
-    /**
-     * main function.
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
-        Scanner sc = new Scanner(System.in);
-        BinarySearchTree bst = new BinarySearchTree();
-        while (sc.hasNextLine()) {
-            String[] tokens = sc.nextLine().split(",");
-            switch (tokens[0]) {
-            case "put":
-                bst.put(new Book(tokens[1], tokens[2],
-                                 Double.parseDouble(tokens[2 + 1])),
-                        Integer.parseInt(tokens[2 + 2]));
-                break;
-            case "get":
-                System.out.println(bst.get(new Book(tokens[1],
-                                                    tokens[2],
-                                                    Double.parseDouble(
-                                                        tokens[2 + 1]))));
-                break;
-            case "max":
-                System.out.println(bst.max());
-                break;
-            case "min":
-                System.out.println(bst.min());
-                break;
-            case "floor":
-                System.out.println(bst.floor(new Book(tokens[1],
-                                                      tokens[2],
-                                                      Double.parseDouble(
-                                                              tokens[2 + 1]))));
-                break;
-            case "ceiling":
-                System.out.println(bst.ceiling(new Book(tokens[1],
-                                                        tokens[2],
-                                                        Double.parseDouble(
-                                                                tokens[
-                                                                2 + 1]))));
-                break;
-            case "select":
-                System.out.println(bst.select(Integer.parseInt(tokens[1])));
-                break;
-            case "deleteMax":
-                bst.deleteMax();
-                break;
-            case "deleteMin":
-                bst.deleteMin();
-                break;
-            case "delete":
-                bst.delete(new Book(tokens[1],
-                                    tokens[2],
-                                    Double.parseDouble(tokens[2 + 1])));
-                break;
-            default:
-                break;
-            }
-        }
-    }
+  }
 }
