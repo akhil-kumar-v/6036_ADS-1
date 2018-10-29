@@ -6,7 +6,5 @@ Starting audit...
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:194:31: '8' is a magic number. [MagicNumber]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:207: 'for' construct must use '{}'s. [NeedBraces]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:296:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:397:12: Unused @param tag for 'first'. [JavadocMethod]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:399:39: Expected @param tag for 'first1'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 9 errors.
+Checkstyle ends with 7 errors.
