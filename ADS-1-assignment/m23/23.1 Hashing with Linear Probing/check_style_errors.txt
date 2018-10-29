@@ -3,8 +3,6 @@ Starting audit...
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:44:5: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:129: 'if' construct must use '{}'s. [NeedBraces]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:153: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:194:31: '8' is a magic number. [MagicNumber]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:207: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:296:5: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:298:5: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 5 errors.

@@ -190,8 +190,8 @@ class LinearProbingHashST<Key, Value> {
         }
 
         n--;
-
-        if (n > 0 && n <= m / 8) {
+        final int eight = 8;
+        if (n > 0 && n <= m / eight) {
             resize(m / 2);
         }
 
@@ -204,10 +204,12 @@ class LinearProbingHashST<Key, Value> {
      */
     public Iterable<Key> keys() {
         Queue<Key> queue = new Queue<Key>();
-        for (int i = 0; i < m; i++)
+        for (int i = 0; i < m; i++) {
             if (keys[i] != null) {
                 queue.enqueue(keys[i]);
             }
+        }
+
         return queue;
     }
 
