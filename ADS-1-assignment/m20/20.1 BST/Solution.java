@@ -236,6 +236,7 @@ class BinarySearchTree {
    */
   public Book min() {
     if (isEmpty()) {
+
       throw new NoSuchElementException("calls min() with empty symbol table");
     }
     return min(root).key;
@@ -247,7 +248,7 @@ class BinarySearchTree {
    *
    * @return     The node.
    */
-  private Node min(Node x) {
+  private Node min(final Node x) {
     if (x.left == null) {
       return x;
     } else {
@@ -273,7 +274,7 @@ class BinarySearchTree {
    *
    * @return     The node.
    */
-  private Node max(Node x) {
+  private Node max(final Node x) {
     if (x.right == null) {
       return x;
     } else {
@@ -287,12 +288,20 @@ class BinarySearchTree {
    *
    * @return     The book object.
    */
-  public Book floor(Book key) {
-    if (key == null) throw new IllegalArgumentException("argument to floor() is null");
-    if (isEmpty()) throw new NoSuchElementException("calls floor() with empty symbol table");
+  public Book floor(final Book key) {
+    if (key == null) {
+      throw new IllegalArgumentException("argument to floor() is null");
+    }
+    if (isEmpty()) {
+      throw new NoSuchElementException("calls floor() with empty symbol table");
+
+    }
     Node x = floor(root, key);
-    if (x == null) return null;
-    else return x.key;
+    if (x == null) {
+      return null;
+    } else {
+      return x.key;
+    }
   }
   /**
    * floor.
@@ -302,14 +311,25 @@ class BinarySearchTree {
    *
    * @return     The node.
    */
-  private Node floor(Node x, Book key) {
-    if (x == null) return null;
+  private Node floor(final Node x, final Book key) {
+    if (x == null) {
+      return null;
+    }
+
     int cmp = key.compareTo(x.key);
-    if (cmp == 0) return x;
-    if (cmp <  0) return floor(x.left, key);
+    if (cmp == 0) {
+      return x;
+    }
+    if (cmp <  0) {
+      return floor(x.left, key);
+    }
     Node t = floor(x.right, key);
-    if (t != null) return t;
-    else return x;
+    if (t != null) {
+      return t;
+    } else {
+      return x;
+    }
+
   }
   /**
    * ceiling.
@@ -380,7 +400,7 @@ class BinarySearchTree {
    *
    * @return     The integer.
    */
-  public int rank(Book key) {
+  public int rank(final Book key) {
     if (key == null) throw new IllegalArgumentException("argument to rank() is null");
     return rank(key, root);
   }
@@ -392,7 +412,7 @@ class BinarySearchTree {
    *
    * @return     The integer.
    */
-  private int rank(Book key, Node x) {
+  private int rank(final Book key, final Node x) {
     if (x == null) return 0;
     int cmp = key.compareTo(x.key);
     if      (cmp < 0) return rank(key, x.left);
