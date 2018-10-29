@@ -126,7 +126,9 @@ class LinearProbingHashST<Key, Value> {
             return;
         }
 
-        if (n >= m / 2) resize(2 * m);
+        if (n >= m / 2) {
+            resize(2 * m);
+        }
 
         int i;
         for (i = hash(key); keys[i] != null; i = (i + 1) % m) {
@@ -150,10 +152,12 @@ class LinearProbingHashST<Key, Value> {
         if (key == null) {
             throw new IllegalArgumentException("argument to get() is null");
         }
-        for (int i = hash(key); keys[i] != null; i = (i + 1) % m)
+        for (int i = hash(key); keys[i] != null; i = (i + 1) % m) {
             if (keys[i].equals(key)) {
                 return vals[i];
             }
+        }
+
         return null;
     }
 
