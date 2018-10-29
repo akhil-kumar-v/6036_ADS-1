@@ -450,13 +450,22 @@ class BinarySearchTree {
       return size(x.left);
     }
   }
+  /**
+   * Del min.
+   */
   public void deleteMin() {
     if (isEmpty()) {
       throw new NoSuchElementException("Symbol table underflow");
     }
     root = deleteMin(root);
   }
-
+  /**
+   * Delete min.
+   *
+   * @param      x     { parameter_description }
+   *
+   * @return     { description_of_the_return_value }
+   */
   private Node deleteMin(final Node x) {
     if (x.left == null) {
       return x.right;
@@ -466,14 +475,18 @@ class BinarySearchTree {
     x.size = size(x.left) + size(x.right) + 1;
     return x;
   }
-
+  /**
+   *  delete max.
+   */
   public void deleteMax() {
     if (isEmpty()) {
       throw new NoSuchElementException("Symbol table underflow");
     }
     root = deleteMax(root);
   }
-
+  /**
+   *  delete max.
+   */
   private Node deleteMax(final Node x) {
     if (x.right == null) {
       return x.left;
@@ -482,7 +495,11 @@ class BinarySearchTree {
     x.size = size(x.left) + size(x.right) + 1;
     return x;
   }
-
+  /**
+   * delete.
+   *
+   * @param      key   The key
+   */
   public void delete(final Book key) {
     if (key == null) {
       throw new IllegalArgumentException(
@@ -490,7 +507,14 @@ class BinarySearchTree {
     }
     root = delete(root, key);
   }
-
+  /**
+   * delete.
+   *
+   * @param      x     { parameter_description }
+   * @param      key   The key
+   *
+   * @return     { description_of_the_return_value }
+   */
   private Node delete(Node x, final Book key) {
     if (x == null) {
       return null;
