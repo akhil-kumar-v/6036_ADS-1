@@ -387,11 +387,19 @@ class BinarySearchTree {
    * @return     The node.
    */
   private Node select(Node x, int k) {
-    if (x == null) return null;
+    if (x == null) {
+      return null;
+    }
     int t = size(x.left);
-    if      (t > k) return select(x.left,  k);
-    else if (t < k) return select(x.right, k - t - 1);
-    else            return x;
+    if      (t > k) {
+      return select(x.left,  k);
+    } else if (t < k) {
+      return select(x.right, k - t - 1);
+    }
+
+    else {
+      return x;
+    }
   }
   /**
    * rank.
@@ -401,8 +409,11 @@ class BinarySearchTree {
    * @return     The integer.
    */
   public int rank(final Book key) {
-    if (key == null) throw new IllegalArgumentException("argument to rank() is null");
+    if (key == null) {
+      throw new IllegalArgumentException("argument to rank() is null");
+    }
     return rank(key, root);
+
   }
   /**
    * Number of keys in the subtree less than key.
@@ -413,51 +424,73 @@ class BinarySearchTree {
    * @return     The integer.
    */
   private int rank(final Book key, final Node x) {
-    if (x == null) return 0;
+    if (x == null) {return 0;}
     int cmp = key.compareTo(x.key);
-    if      (cmp < 0) return rank(key, x.left);
-    else if (cmp > 0) return 1 + size(x.left) + rank(key, x.right);
-    else              return size(x.left);
+    if      (cmp < 0) {
+      return rank(key, x.left);
+    } else if (cmp > 0) {
+      return 1 + size(x.left) + rank(key, x.right);
+    } else             {
+      return size(x.left);
+    }
   }
   public void deleteMin() {
-    if (isEmpty()) throw new NoSuchElementException("Symbol table underflow");
+    if (isEmpty()) {
+      throw new NoSuchElementException("Symbol table underflow");
+    }
     root = deleteMin(root);
   }
 
-  private Node deleteMin(Node x) {
-    if (x.left == null) return x.right;
+  private Node deleteMin(final Node x) {
+    if (x.left == null) {
+      return x.right;
+
+    }
     x.left = deleteMin(x.left);
     x.size = size(x.left) + size(x.right) + 1;
     return x;
   }
 
   public void deleteMax() {
-    if (isEmpty()) throw new NoSuchElementException("Symbol table underflow");
+    if (isEmpty()) {
+      throw new NoSuchElementException("Symbol table underflow");
+    }
     root = deleteMax(root);
   }
 
-  private Node deleteMax(Node x) {
-    if (x.right == null) return x.left;
+  private Node deleteMax(final Node x) {
+    if (x.right == null) {
+      return x.left;
+    }
     x.right = deleteMax(x.right);
     x.size = size(x.left) + size(x.right) + 1;
     return x;
   }
 
-  public void delete(Book key) {
-    if (key == null) throw new IllegalArgumentException(
+  public void delete(final Book key) {
+    if (key == null) {
+      throw new IllegalArgumentException(
         "calls delete() with a null key");
+    }
     root = delete(root, key);
   }
 
   private Node delete(Node x, Book key) {
-    if (x == null) return null;
-
+    if (x == null) {
+      return null;
+    }
     int cmp = key.compareTo(x.key);
-    if      (cmp < 0) x.left  = delete(x.left,  key);
-    else if (cmp > 0) x.right = delete(x.right, key);
-    else {
-      if (x.right == null) return x.left;
-      if (x.left  == null) return x.right;
+    if      (cmp < 0) {
+      x.left  = delete(x.left,  key);
+    } else if (cmp > 0) {
+      x.right = delete(x.right, key);
+    } else {
+      if (x.right == null) {
+        return x.left;
+      }
+      if (x.left  == null) {
+        return x.right;
+      }
       Node t = x;
       x = min(t.right);
       x.right = deleteMin(t.right);
