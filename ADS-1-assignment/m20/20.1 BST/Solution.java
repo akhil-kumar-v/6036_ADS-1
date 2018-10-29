@@ -438,7 +438,9 @@ class BinarySearchTree {
    * @return     The integer.
    */
   private int rank(final Book key, final Node x) {
-    if (x == null) {return 0;}
+    if (x == null) {
+      return 0;
+    }
     int cmp = key.compareTo(x.key);
     if      (cmp < 0) {
       return rank(key, x.left);
