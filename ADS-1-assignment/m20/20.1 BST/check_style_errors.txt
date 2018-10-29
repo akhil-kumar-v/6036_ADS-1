@@ -1,5 +1,4 @@
 Starting audit...
-[ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m20\20.1 BST\Solution.java:522:23: Parameter x should be final. [FinalParameters]
 [ERROR] D:\Git repo\ADS-1\6036_ADS-1\ADS-1-assignment\m20\20.1 BST\Solution.java:523:19: Empty statement. [EmptyStatement]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
