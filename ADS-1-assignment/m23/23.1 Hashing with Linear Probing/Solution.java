@@ -61,7 +61,9 @@ class LinearProbingHashST<Key, Value> {
      * @return     { description_of_the_return_value }
      */
     public boolean contains(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to contains() is null");
+        if (key == null) {
+            throw new IllegalArgumentException("argument to contains() is null");
+        }
         return get(key) != null;
     }
     /**
@@ -99,7 +101,9 @@ class LinearProbingHashST<Key, Value> {
      * @param      val   The value
      */
     public void put(Key key, Value val) {
-        if (key == null) throw new IllegalArgumentException("first argument to put() is null");
+        if (key == null) {
+            throw new IllegalArgumentException("first argument to put() is null");
+        }
 
         if (val == null) {
             delete(key);
@@ -127,10 +131,13 @@ class LinearProbingHashST<Key, Value> {
      * @return     { description_of_the_return_value }
      */
     public Value get(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to get() is null");
+        if (key == null) {
+            throw new IllegalArgumentException("argument to get() is null");
+        }
         for (int i = hash(key); keys[i] != null; i = (i + 1) % m)
-            if (keys[i].equals(key))
+            if (keys[i].equals(key)){
                 return vals[i];
+            }
         return null;
     }
 
@@ -139,9 +146,13 @@ class LinearProbingHashST<Key, Value> {
      *
      * @param      key   The key
      */
-    public void delete(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to delete() is null");
-        if (!contains(key)) return;
+    public void delete(final Key key) {
+        if (key == null) {
+            throw new IllegalArgumentException("argument to delete() is null");
+        }
+        if (!contains(key)) {
+            return;
+        }
 
         int i = hash(key);
         while (!key.equals(keys[i])) {
