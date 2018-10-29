@@ -75,7 +75,8 @@ class LinearProbingHashST<Key, Value> {
      */
     public boolean contains(final Key key) {
         if (key == null) {
-            throw new IllegalArgumentException("argument to contains() is null");
+            throw new IllegalArgumentException("argument "
+                                               + "to contains() is null");
         }
         return get(key) != null;
     }
@@ -87,8 +88,8 @@ class LinearProbingHashST<Key, Value> {
      * @return     { description_of_the_return_value }
      */
     private int hash(final Key key) {
-
-        return (11 * key.hashCode()) % m;
+        final int ele = 11;
+        return (ele * key.hashCode()) % m;
     }
     /**
      * capacity.
@@ -148,7 +149,7 @@ class LinearProbingHashST<Key, Value> {
             throw new IllegalArgumentException("argument to get() is null");
         }
         for (int i = hash(key); keys[i] != null; i = (i + 1) % m)
-            if (keys[i].equals(key)){
+            if (keys[i].equals(key)) {
                 return vals[i];
             }
         return null;
